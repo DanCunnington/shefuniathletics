@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 
@@ -44,3 +45,5 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'rails_12factor', group: :production
+
+ruby "2.0.0"
