@@ -47,3 +47,8 @@ end
 gem 'rails_12factor', group: :production
 
 ruby "2.0.0" 
+
+group :development do
+  gem 'sqlite3'
+
+end
