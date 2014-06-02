@@ -1,0 +1,23 @@
+Shefuniathletics
+
+user_types
+---------------
+id :: int
+user_id :: int
+type :: int
+
+(0 - athlete)
+(1 - coach)
+(2 - admin)
+
+
+users
+---------------
+id :: int
+provider :: string
+u_id :: string
+name :: string
+oauth_token :: string
+oauth_expires_at  :: datetime
+timestamps :: datetime
+
