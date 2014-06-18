@@ -9,6 +9,7 @@ Shefuniathletics::Application.routes.draw do
 
    match '/newsletter', to: 'new_athletes#new', via: 'get'
    match '/training', to: 'welcome#training', via: 'get'
+   match '/runs', to: 'run_routes#index', via: 'get'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
