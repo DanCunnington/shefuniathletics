@@ -1,0 +1,40 @@
+
+
+    <div class="signup_cont spaced">
+
+      <h1 class="heading">Athletics and XC Club Newsletter</h1>
+
+      <%= form_for(@new_athlete) do |f| %>
+      <% if @new_athlete.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@new_athlete.errors.count, "error") %> prohibited this athlete from being saved:</h2>
+
+        <ul>
+          <% @new_athlete.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+
+
+
+      <div class="field">
+        <%= f.label :first_name, class: "control-label" %><br />
+        <%= f.text_field :first_name, class: "form-control"%>
+      </div>
+
+      <div class="field">
+        <%= f.label :surname, class: "control-label" %><br />
+        <%= f.text_field :surname, class: "form-control"%>
+      </div>
+      <div class="field">
+        <%= f.label :email, class: "control-label" %><br />
+        <%= f.text_field :email, class: "form-control"%>
+      </div>
+      <div class="actions spaced">
+        <%= f.submit "Sign me up!", class: "btn btn-block btn-large btn-warning" %>
+      </div>
+
+    <% end %>
+    </div>

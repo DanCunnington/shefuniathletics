@@ -5,6 +5,11 @@ Shefuniathletics::Application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'welcome#index'
 
+   resources :new_athletes
+
+   match '/newsletter', to: 'new_athletes#new', via: 'get'
+   match '/training', to: 'welcome#training', via: 'get'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
