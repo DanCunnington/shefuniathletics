@@ -9,7 +9,7 @@
 
   <div id="nav-top-cont">
     <%= image_tag("sps.png", id: "sport-sheffield", alt: "Sport Sheffield") %>
-    <h4 id="nav_athletics_head"><%= link_to "Athletics and XC", root_url, :class => "no-style" %></h4>
+    <h4 id="nav_athletics_head"><%= link_to "Athletics & XC", root_url, :class => "no-style" %></h4>
   </div>
   </div>
   <div class="navbar-collapse collapse navbar-responsive-collapse">
@@ -34,6 +34,7 @@
       <li><%= link_to "Training", training_path %></li>
       <li><%= link_to "Running Routes", runs_path %></li>
       
+      
     </ul>
     
     <ul class="nav navbar-nav navbar-right">
@@ -53,7 +54,7 @@
 
         <% else %>
           <li><%= image_tag("fb.png", id: "fb", alt: "Facebook") %></li>
-          <li><h4 class="nav_fb_sign_in"><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "no-style"%></h4></li>
+          <li><h5 class="nav_fb_sign_in"><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "no-style"%></h5></li>
           
         <% end %>
 
