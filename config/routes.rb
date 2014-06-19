@@ -7,9 +7,17 @@ Shefuniathletics::Application.routes.draw do
 
    resources :new_athletes
 
+   get '/profile/:id' => 'users#profile', via: :get, as: 'profile'
+
    match '/newsletter', to: 'new_athletes#new', via: 'get'
    match '/training', to: 'welcome#training', via: 'get'
    match '/runs', to: 'run_routes#index', via: 'get'
+
+
+   #Facebook omniauth session routes
+   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+   match 'auth/failure', to: redirect('/'), via: [:get, :post]
+   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

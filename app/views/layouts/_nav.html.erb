@@ -5,11 +5,20 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <%= link_to image_tag("sps.png", id: "sport-sheffield", alt: "Sport Sheffield"), root_path, {:class => "navbar-brand"} %>
+
+
+  <div id="nav-top-cont">
+    <%= image_tag("sps.png", id: "sport-sheffield", alt: "Sport Sheffield") %>
+    <h4 id="nav_athletics_head"><%= link_to "Athletics and XC", root_url, :class => "no-style" %></h4>
+  </div>
   </div>
   <div class="navbar-collapse collapse navbar-responsive-collapse">
-  <h3 class="nav_head navbar-left">Athletics and XC</h3>
+
+  
+
     <ul class="nav navbar-nav">
+    
+    
 
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">About The Club <b class="caret"></b></a>
@@ -28,8 +37,29 @@
     </ul>
     
     <ul class="nav navbar-nav navbar-right">
+
+    <li class="dropdown">
+
+        <% if current_user %>
+        <a href="#" id="user-profile-dropdown" class="dropdown-toggle" data-toggle="dropdown">
+        <h4 class="nav_head navbar-left">Hey <%=current_user.first_name %></h4>
+        <img src="https://graph.facebook.com/<%= current_user.uid %>/picture/"
+        class="img-40-r"><b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "Profile", profile_path(current_user), id: "profile" %></li>
+          <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
+          
+        </ul>
+
+        <% else %>
+          <li><%= image_tag("fb.png", id: "fb", alt: "Facebook") %></li>
+          <li><h4 class="nav_fb_sign_in"><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "no-style"%></h4></li>
+          
+        <% end %>
+
+      </li>
      
-      <%= link_to image_tag("uni.png", id: "uni", alt: "University of Sheffield"), root_path, {:class => "navbar-brand"} %>
+      <li><%= image_tag("uni.png", id: "uni", alt: "University of Sheffield") %></li>
     </ul>
   </div>
 </div>
