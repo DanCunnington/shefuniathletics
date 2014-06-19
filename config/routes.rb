@@ -12,6 +12,8 @@ Shefuniathletics::Application.routes.draw do
    match '/newsletter', to: 'new_athletes#new', via: 'get'
    match '/training', to: 'welcome#training', via: 'get'
    match '/runs', to: 'run_routes#index', via: 'get'
+   match '/membership', to: 'welcome#membership', via: 'get'
+   match '/committee', to: 'welcome#committee', via: 'get'
 
 
    #Facebook omniauth session routes

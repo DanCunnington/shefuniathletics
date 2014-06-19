@@ -4,4 +4,12 @@ class WelcomeController < ApplicationController
 		@new_athlete = NewAthlete.new
 	end
 
+	def membership
+
+	end
+
+	def committee
+
+	end
+
 end
