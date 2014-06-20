@@ -39,26 +39,29 @@
     
     <ul class="nav navbar-nav navbar-right">
 
-    <li class="dropdown">
+    
 
-        <% if current_user %>
+      <% if current_user %>
+      <li class="dropdown">
         <a href="#" id="user-profile-dropdown" class="dropdown-toggle" data-toggle="dropdown">
-        <h4 class="nav_head navbar-left">Hey <%=current_user.first_name %></h4>
-        <img src="https://graph.facebook.com/<%= current_user.uid %>/picture/"
-        class="img-40-r"><b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><%= link_to "Profile", profile_path(current_user), id: "profile" %></li>
-          <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
-          
-        </ul>
+          <h4 class="nav_head navbar-left">Hey <%=current_user.first_name %></h4>
+          <img src="https://graph.facebook.com/<%= current_user.uid %>/picture/"
+          class="img-40-r"><b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Profile", profile_path(current_user), id: "profile" %></li>
+            <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
 
+          </ul>
+
+        </li>
         <% else %>
-          <li><%= image_tag("fb.png", id: "fb", alt: "Facebook") %></li>
-          <li><h5 class="nav_fb_sign_in"><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "no-style"%></h5></li>
-          
+
+        <li id="fb-sign-in"><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %></li>
+
+
         <% end %>
 
-      </li>
+      
      
       <li><%= image_tag("uni.png", id: "uni", alt: "University of Sheffield") %></li>
     </ul>
