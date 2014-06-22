@@ -12,4 +12,12 @@ class WelcomeController < ApplicationController
 
 	end
 
+	def coaches
+
+	end
+
+	def kit
+
+	end
+
 end

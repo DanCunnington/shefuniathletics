@@ -6,7 +6,7 @@
 h1.heading, h1.training {
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 	margin-top: 40px;
 }
 
@@ -42,6 +42,10 @@ body {
 
 .spaced {
 	margin-top: 3em;
+}
+
+.two-em-spaced {
+	margin-top: 2em;
 }
 
 .field_with_errors {
@@ -230,6 +234,24 @@ img.committee-photos {
 
 }
 
+.committee-person {
+	&:hover {
+
+		img {
+
+			border: solid 5px #E3A600;
+		}
+
+		h4 {
+			color: #E3A600;
+	
+		}
+
+
+	};
+}
+
+
 h4.montserrat {
 	font-family: 'Montserrat', sans-serif;
 }
@@ -262,4 +284,46 @@ h4.committee-pos-title {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a5897', endColorstr='#204083',GradientType=0 ); /* IE6-9 */
 
 
+}
+
+#twitter-widget-0 {
+	margin:0 auto !important;
+    display:block;
+}
+
+p.foot {
+	margin-top: 40px;
+	padding-top: 10px;
+	margin-bottom: 20px;
+	border-top: solid 1px whitesmoke;
+	clear: both;
+}
+
+.tooltip-inner{
+	color: black;
+	background: rgba(255,255,255,0.7);
+	
+}
+
+.modal-open {
+	overflow: visible;
+}
+
+.modal-title {
+	color: #E3A600;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.newsletter-sign-up-button {
+	color: white !important;
+	font-family: 'Montserrat', sans-serif;	
+	margin:0 auto !important;
+    display:block;
+    min-width: 212px;
+    max-width: 212px;
+    margin-top: 20px !important;
+
+	&:hover {
+		color: inherit !important;
+	};
 }

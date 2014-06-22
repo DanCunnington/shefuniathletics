@@ -1,0 +1,7 @@
+1) Personal login area to view split times in training
+2) Calendar for upcoming races/events/socials
+3) Record of recent race results
+4) Rec run routes
+5) Twitter Feed
+6) Kit page
+7) Vinco Sport integration - Speak to Matthew Quine

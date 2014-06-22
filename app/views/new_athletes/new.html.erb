@@ -30,11 +30,13 @@
       </div>
       <div class="field">
         <%= f.label :email, class: "control-label" %><br />
-        <%= f.text_field :email, class: "form-control"%>
+        <%= f.text_field :email, class: "form-control", :data => {:toggle => "tooltip", :placement => "right", :title => "@sheffield.ac.uk emails only please."}%>
       </div>
-      <div class="actions spaced">
+      <div class="actions two-em-spaced">
         <%= f.submit "Sign me up!", class: "btn btn-block btn-large btn-warning" %>
       </div>
+
+
 
     <% end %>
     </div>
