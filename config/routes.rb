@@ -1,4 +1,6 @@
 Shefuniathletics::Application.routes.draw do
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -6,8 +8,16 @@ Shefuniathletics::Application.routes.draw do
    root 'welcome#index'
 
    resources :new_athletes
+   resources :fixtures do
+      get 'admin', on: :collection
+
+   end
+   resources :admin_sessions, only: [:new, :create, :destroy]
+   resources :admins
 
    get '/profile/:id' => 'users#profile', via: :get, as: 'profile'
+   get '/splits/:id' => 'users#my_splits', via: :get, as: 'splits'
+   
 
    match '/newsletter', to: 'new_athletes#new', via: 'get'
    match '/training', to: 'welcome#training', via: 'get'
@@ -15,13 +25,16 @@ Shefuniathletics::Application.routes.draw do
    match '/membership', to: 'welcome#membership', via: 'get'
    match '/committee', to: 'welcome#committee', via: 'get'
    match '/coaches', to: 'welcome#coaches', via: 'get'
+   match '/socials', to: 'welcome#socials', via: 'get'
    match '/kit', to: 'welcome#kit', via: 'get'
-
+   match '/fixtures', to: 'fixtures#index', via: 'get'
+   match '/admin', to: 'welcome#admin', via: 'get'
 
    #Facebook omniauth session routes
    match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
    match 'auth/failure', to: redirect('/'), via: [:get, :post]
    match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
+   match '/signout_admin',   to: 'admin_sessions#destroy', as: 'signout_admin', via: [:get, :post]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

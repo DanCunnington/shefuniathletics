@@ -1,5 +1,5 @@
 $(function() {
-	var errors = $(".alert.alert-error");
+	var errors = $(".alert.alert-danger");
 	
 	$.each(errors, function(index) {
 		var error = $(errors[index]);
@@ -7,7 +7,7 @@ $(function() {
   					+ "<button type='button' class='close' data-dismiss='alert'>×</button>"
   					+ error.text()
   					+ "</div>";
-		error.removeClass("alert").removeClass("alert-error");
+		error.removeClass("alert").removeClass("alert-danger");
 		error.html(html);
 	});
 	
@@ -23,7 +23,7 @@ $(function() {
 		success.html(html);
 	});
 	
-	var notices = $(".alert.alert-notice");
+	var notices = $(".alert.alert-info");
 	
 	$.each(notices, function(index) {
 		var notice = $(notices[index]);
@@ -31,7 +31,7 @@ $(function() {
   					+ "<button type='button' class='close' data-dismiss='alert'>×</button>"
   					+ notice.text()
   					+ "</div>";
-		notice.removeClass("alert").removeClass("alert-notice");
+		notice.removeClass("alert").removeClass("alert-info");
 		notice.html(html);
 	});
 	

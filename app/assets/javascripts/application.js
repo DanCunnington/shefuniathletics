@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap.min
 //= require turbolinks
+//= require_tree
 $(document).ready(function(){
     $('input').tooltip();
 });
-//= require_tree .

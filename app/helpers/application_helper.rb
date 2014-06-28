@@ -3,9 +3,19 @@ module ApplicationHelper
 	    case level
 	        when :notice then "alert alert-info"
 	        when :success then "alert alert-success"
-	        when :error then "alert alert-error"
-	        when :alert then "alert alert-error"
+	        when :danger then "alert alert-danger"
+	        when :alert then "alert alert-info"
 	    end
+	end
+
+	def admin(user)
+		if user.class.name == "User"
+			return false
+		else
+			return true
+
+		end
+
 	end
 
 

@@ -56,3 +56,5 @@ end
 
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
+gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt'

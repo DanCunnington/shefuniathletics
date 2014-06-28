@@ -1,0 +1,44 @@
+<div class="signup_cont spaced">
+
+ <%= form_for(@fixture) do |f| %>
+  <% if @fixture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fixture.errors.count, "error") %> prohibited this fixture from being saved:</h2>
+
+      <ul>
+      <% @fixture.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="field">
+    <%= f.label :name, class: "control-label" %><br />
+    <%= f.text_field :name, class: "form-control"%>
+  </div>
+
+  <div class="field">
+    <%= f.label :date, class: "control-label" %><br />
+    <%= f.text_field :date, class: "form-control"%>
+  </div>
+  <div class="field">
+    <%= f.label :location, class: "control-label" %><br />
+    <%= f.text_field :location, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :result_link, class: "control-label" %><br />
+    <%= f.text_field :result_link, class: "form-control" %>
+  </div>
+  <div class="actions two-em-spaced">
+    <%= f.submit class: "btn btn-block btn-large btn-warning spaced" %>
+    <%= link_to 'Back', admin_fixtures_path, id: "new_fix", class: "btn btn-block btn-default spaced"  %>
+  </div>
+
+
+
+  <% end %>
+</div>
+

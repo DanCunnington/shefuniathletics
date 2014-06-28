@@ -1,23 +1,36 @@
 Shefuniathletics
 
-user_types
----------------
-id :: int
-user_id :: int
-type :: int
-
-(0 - athlete)
-(1 - coach)
-(2 - admin)
-
 
 users
 ---------------
-id :: int
 provider :: string
 u_id :: string
 name :: string
 oauth_token :: string
 oauth_expires_at  :: datetime
 timestamps :: datetime
+
+
+fixtures
+---------------
+name :: string
+date :: string
+location :: string
+result_link :: string
+
+
+socials
+---------------
+name :: string
+date :: string
+facebook_event :: string
+
+
+running_routes
+---------------
+title :: string
+distance :: string
+description :: text
+google_maps_link :: text
+
 

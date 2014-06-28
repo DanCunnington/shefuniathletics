@@ -5,4 +5,8 @@ class UsersController < ApplicationController
 
 	end
 
+	def my_splits
+		@user = User.find(params[:id])
+	end
+
 end

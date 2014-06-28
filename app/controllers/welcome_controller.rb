@@ -20,4 +20,9 @@ class WelcomeController < ApplicationController
 
 	end
 
+	def socials
+
+	end
+
+
 end

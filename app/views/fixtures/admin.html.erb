@@ -1,0 +1,32 @@
+<h1 class="heading">Fixtures and Results</h1>
+<div class="panel panel-default table-responsive">
+  <table class="table table-hover">  
+    <thead>  
+      <tr>    
+        <th>Name</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Result link</th>  
+      </tr>  
+    </thead>  
+    <tbody>  
+     <% @fixtures.each do |fixture| %>
+     <tr>
+      <td><%= fixture.name %></td>
+      <td><%= fixture.date %></td>
+      <td><%= fixture.location %></td>
+      <% if fixture.result_link != "" %>
+        <td><%= link_to "Here", "http://"+fixture.result_link %></td>
+      <% else %>
+        <td></td>
+      <% end %>
+      <td><%= link_to 'Edit', edit_fixture_path(fixture) %></td>
+      <td><%= link_to 'Delete', fixture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>  
+</div>
+<div class="signup_cont two-em-spaced">
+  <%= link_to "New Fixture", new_fixture_path, id: "new_fix", class: "btn btn-block btn-large btn-warning" %>
+</div>

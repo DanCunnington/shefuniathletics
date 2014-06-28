@@ -2,6 +2,6 @@
 2) Calendar for upcoming races/events/socials
 3) Record of recent race results
 4) Rec run routes
-5) Twitter Feed
-6) Kit page
-7) Vinco Sport integration - Speak to Matthew Quine
+5) Kit page
+6) Vinco Sport integration - Speak to Matthew Quine
+7) Follow/Like buttons next to newsletter sign up buttons

@@ -1,0 +1,27 @@
+<h1 class="heading">Fixtures and Results</h1>
+<div class="panel panel-default table-responsive">
+  <table class="table table-hover">  
+    <thead>  
+      <tr>    
+        <th>Name</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Result link</th>  
+      </tr>  
+    </thead>  
+    <tbody>  
+     <% @fixtures.each do |fixture| %>
+     <tr>
+      <td><%= fixture.name %></td>
+      <td><%= fixture.date %></td>
+      <td><%= fixture.location %></td>
+      <% if fixture.result_link != "" %>
+        <td><%= link_to "Here", "http://"+fixture.result_link %></td>
+      <% else %>
+        <td></td>
+      <% end %>
+    </tr>
+    <% end %>
+  </tbody>
+</table>  
+</div>
