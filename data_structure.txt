@@ -26,11 +26,16 @@ date :: string
 facebook_event :: string
 
 
-running_routes
+rec_run_routes
 ---------------
-title :: string
-distance :: string
+name :: string
+distance :: integer (km)
+difficulty :: integer
 description :: text
 google_maps_link :: text
+
+difficulty
+---------------
+grade :: string (Easy, Medium, Hard)
 
 

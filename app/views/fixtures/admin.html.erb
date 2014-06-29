@@ -1,4 +1,6 @@
 <h1 class="heading">Fixtures and Results</h1>
+<%= render 'layouts/admin_dash' %>
+<% if @fixtures != [] %> 
 <div class="panel panel-default table-responsive">
   <table class="table table-hover">  
     <thead>  
@@ -6,27 +8,32 @@
         <th>Name</th>
         <th>Date</th>
         <th>Location</th>
-        <th>Result link</th>  
+        <th>Result link</th>
+        <th></th>
+        <th></th>  
       </tr>  
     </thead>  
     <tbody>  
      <% @fixtures.each do |fixture| %>
      <tr>
       <td><%= fixture.name %></td>
-      <td><%= fixture.date %></td>
+      <td><%= fixture.date.to_formatted_s(:long) %></td>
       <td><%= fixture.location %></td>
       <% if fixture.result_link != "" %>
-        <td><%= link_to "Here", "http://"+fixture.result_link %></td>
+        <td><%= link_to "Here", "http://"+fixture.result_link, class:"btn btn-warning edit-btn" %></td>
       <% else %>
         <td></td>
       <% end %>
-      <td><%= link_to 'Edit', edit_fixture_path(fixture) %></td>
-      <td><%= link_to 'Delete', fixture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Edit', edit_fixture_path(fixture), class:"btn btn-info edit-btn" %></td>
+      <td><%= link_to 'Delete', fixture, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger edit-btn" %></td>
     </tr>
     <% end %>
   </tbody>
 </table>  
 </div>
+<% else %>
+<p>Fixtures will appear shortly.</p>
+<% end %>
 <div class="signup_cont two-em-spaced">
-  <%= link_to "New Fixture", new_fixture_path, id: "new_fix", class: "btn btn-block btn-large btn-warning" %>
+  <%= link_to "New Fixture", new_fixture_path, id: "new_fix", class: "btn btn-block btn-large btn-warning", "data-no-turbolink" => true %>
 </div>

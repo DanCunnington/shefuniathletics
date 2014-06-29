@@ -87,13 +87,13 @@ body {
 	width: 100%;
 }
 
-.redmires-route-cont {
+.rec-run-route-cont {
 	max-width: 1000px;
 	margin: 0 auto;
 	margin-bottom: 20px;
 }
 
-#redmires-route {
+.rec-run-route {
 	height: 300px;
 	width: 100%;
 }
@@ -252,7 +252,7 @@ img.committee-photos {
 }
 
 
-h4.montserrat {
+h4.montserrat, p {
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -342,10 +342,81 @@ td a:hover {
 
 }
 
-ul.admin_dash a{
+
+
+#new_fix, #new_soc {
 	color: white;
 }
 
-#new_fix {
-	color: white;
+.rec-run-button {
+	color: white !important;
+	max-width: 100px;
+	display: inline-block !important;
+
+	&:hover {
+		color: white !important;
+	}
+}
+
+.edit-btn {
+	text-decoration: none !important;
+	color: white !important;
+
+	&:hover {
+		color: white !important;
+	}
+}
+
+td {
+	vertical-align: middle !important;
+
+}
+
+.Zebra_DatePicker {
+	z-index: 2;
+	top: 40px !important;
+}
+
+.navbar {
+	z-index: 1 !important;
+}
+
+.Zebra_DatePicker_Icon {
+	border-radius: 2px;
+	background-color: gold;
+	margin-right: 10px !important;
+	height: 20px !important;
+	width: 20px !important;
+	border: solid 1px black !important;
+
+}
+
+ul li a {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.admin-dash-cont {
+	background: rgba(255,255,255,0.8);
+	border-radius: 5px;
+
+}
+
+.black-text {
+	color: black !important;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.facebook-group-link {
+	color: gold !important;
+
+	&:hover {
+		text-decoration: none;
+		background-color: transparent;
+
+	}
+
+
 }

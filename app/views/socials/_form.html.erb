@@ -1,12 +1,12 @@
 <div class="signup_cont spaced">
 
- <%= form_for(@fixture) do |f| %>
-  <% if @fixture.errors.any? %>
+ <%= form_for(@social) do |f| %>
+  <% if @social.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@fixture.errors.count, "error") %> prohibited this fixture from being saved:</h2>
+      <h2><%= pluralize(@social.errors.count, "error") %> prohibited this social from being saved:</h2>
 
       <ul>
-      <% @fixture.errors.full_messages.each do |msg| %>
+      <% @social.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -25,16 +25,13 @@
     <%= f.text_field :date, class: "form-control", :data => {:behaviour => "datepicker"}%>
   </div>
   <div class="field">
-    <%= f.label :location, class: "control-label" %><br />
-    <%= f.text_field :location, class: "form-control" %>
+    <%= f.label :facebook_event_link, class: "control-label" %><br />
+    <%= f.text_field :facebook_event_link, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :result_link, class: "control-label" %><br />
-    <%= f.text_field :result_link, class: "form-control" %>
-  </div>
+  
   <div class="actions two-em-spaced">
     <%= f.submit class: "btn btn-block btn-large btn-warning spaced" %>
-    <%= link_to 'Back', admin_fixtures_path, id: "new_fix", class: "btn btn-block btn-default spaced"  %>
+    <%= link_to 'Back', admin_socials_path, id: "new_fix", class: "btn btn-block btn-default spaced"  %>
   </div>
 
 
@@ -45,4 +42,3 @@
 <script type="text/javascript">
   $('[data-behaviour~=datepicker]').Zebra_DatePicker();
 </script>
-

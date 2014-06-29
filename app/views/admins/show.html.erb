@@ -1,3 +1,11 @@
-<h1 class="heading">Admin - <%= current_admin_user.first_name %></h1>
+<h1 class="heading"><%= @account_type %> - <%= current_admin_user.first_name %></h1>
 
 <%= render 'layouts/admin_dash' %>
+
+
+
+<p>Hey <%= current_admin_user.first_name %>, this is your <%= @account_type %> account. You can change your details by clicking the button below:</p>
+
+<div class="signup_cont two-em-spaced">
+  <%= link_to "Edit My Details", edit_admin_path(current_admin_user), id: "new_fix", class: "btn btn-block btn-large btn-warning", "data-no-turbolink" => true %>
+</div>

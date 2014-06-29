@@ -1,0 +1,35 @@
+<h1 class="heading">Running Routes</h1>
+
+<%= render 'layouts/admin_dash' %>
+
+<div class="signup_cont two-em-spaced">
+  <%= link_to "New Route", new_rec_run_route_path, id: "new_fix", class: "btn btn-block btn-large btn-warning" %>
+</div>
+
+<% if @rec_run_routes != [] %> 
+  
+  <% @rec_run_routes.each do |rec_run_route| %>
+  <div class="rec-run-route-cont">
+  <h4 class="montserrat"><%= "#{rec_run_route.name} - #{rec_run_route.distance}km - Difficulty: #{rec_run_route.difficulty}" %></h4>
+  <p><%= rec_run_route.description %></p>
+  <%= link_to 'Edit', edit_rec_run_route_path(rec_run_route), class:"btn btn-info rec-run-button spaced" %>
+  <%= link_to 'Delete', rec_run_route, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger rec-run-button spaced" %>
+    <iframe class="rec-run-route" src=<%=rec_run_route.google_maps_link %>></iframe>
+
+  </div>
+
+  <% end %>
+
+
+<% else %>
+  <p>Running Routes will appear shortly.</p>
+<% end %>
+
+<div class="signup_cont two-em-spaced">
+  <%= link_to "New Route", new_rec_run_route_path, id: "new_fix", class: "btn btn-block btn-large btn-warning" %>
+</div>
+
+
+
+
+

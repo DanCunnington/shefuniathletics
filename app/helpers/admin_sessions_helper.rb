@@ -11,11 +11,12 @@ module AdminSessionsHelper
 
 	def signed_in?
     if current_admin_user != nil
-    	if current_admin_user.email == "dcunnington1@sheffield.ac.uk"
-        return true
-      else 
-        return false
-      end
+    	#if current_admin_user.email == "dcunnington1@sheffield.ac.uk"
+       # return true
+     # else 
+      #  return false
+     # end
+     return true
     else
 
       return false
@@ -37,7 +38,7 @@ module AdminSessionsHelper
 	   
   	end
 
-  	def sign_out
+  	def sign_out_admin
 
     	current_admin_user.update_attribute(:remember_token,
                                     Admin.hash(Admin.new_remember_token))

@@ -15,6 +15,7 @@
 //= require bootstrap.min
 //= require turbolinks
 //= require_tree
+//= require zebra-datepicker/core
 $(document).ready(function(){
     $('input').tooltip();
 });

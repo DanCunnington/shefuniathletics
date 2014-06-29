@@ -12,6 +12,7 @@ class FixturesController < ApplicationController
   # GET /fixtures/new
   def new
     @fixture = Fixture.new
+    @onload = "dateFieldDefaultFixture();"
   end
 
   # GET /fixtures/1/edit

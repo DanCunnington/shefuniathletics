@@ -1,0 +1,30 @@
+
+<h1 class="heading">Socials</h1>
+<% if @socials != [] %> 
+<div class="panel panel-default table-responsive">
+  <table class="table table-hover">  
+    <thead>  
+      <tr>    
+        <th>Name</th>
+        <th>Date</th>
+        <th>Facebook Event</th>  
+      </tr>  
+    </thead>  
+    <tbody>  
+     <% @socials.each do |social| %>
+     <tr>
+      <td><%= social.name %></td>
+      <td><%= social.date.to_formatted_s(:long) %></td>
+      <% if social.facebook_event_link != "" %>
+      <td><%= link_to "Here", "http://"+social.facebook_event_link, class:"btn btn-warning edit-btn" %></td>
+      <% else %>
+      <td></td>
+      <% end %>
+    </tr>
+    <% end %>
+  </tbody>
+</table>  
+</div>
+<% else %>
+<p>Social events will appear shortly.</p>
+<% end %>

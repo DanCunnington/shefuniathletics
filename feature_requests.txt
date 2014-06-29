@@ -1,7 +1,15 @@
-1) Personal login area to view split times in training
-2) Calendar for upcoming races/events/socials
-3) Record of recent race results
-4) Rec run routes
-5) Kit page
-6) Vinco Sport integration - Speak to Matthew Quine
-7) Follow/Like buttons next to newsletter sign up buttons
+--------------------------------------------
+TO-DO
+--------------------------------------------
+
+- Personal login area to view split times in training
+- Fill in static pages
+- Vinco Sport integration - Speak to Matthew Quine
+- Follow/Like buttons next to newsletter sign up buttons
+
+---------------------------------------------
+DONE
+---------------------------------------------
+- Record of recent race results
+- Rec run routes
+- Calendar for upcoming races/events/socials

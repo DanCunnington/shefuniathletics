@@ -1,0 +1,48 @@
+<div class="signup_cont spaced">
+
+ <%= form_for(@rec_run_route) do |f| %>
+  <% if @rec_run_route.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rec_run_route.errors.count, "error") %> prohibited this rec_run_route from being saved:</h2>
+
+      <ul>
+      <% @rec_run_route.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="field">
+    <%= f.label :name, class: "control-label" %><br />
+    <%= f.text_field :name, class: "form-control"%>
+  </div>
+
+  <div class="field">
+    <%= f.label :distance, "Distance (km)", class: "control-label" %><br />
+    <%= f.number_field :distance, class: "form-control"%>
+  </div>
+  <div class="field">
+    <%= f.label :difficulty, class: "control-label" %><br />
+    <%= f.select(:difficulty, Difficulty.find(:all).collect {|u| [u.grade]}.uniq, {}, {class: "form-control"})%>
+  </div>
+  <div class="field">
+    <%= f.label :description, class: "control-label" %><br />
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :google_maps_link, class: "control-label" %><br />
+    <%= f.text_field :google_maps_link, class: "form-control" %>
+  </div>
+  <div class="actions two-em-spaced">
+    <%= f.submit class: "btn btn-block btn-large btn-warning spaced" %>
+    <%= link_to 'Back', admin_rec_run_routes_path, id: "new_fix", class: "btn btn-block btn-default spaced"  %>
+  </div>
+
+
+
+  <% end %>
+</div>
+

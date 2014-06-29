@@ -1,13 +1,22 @@
-
+<div class="admin-dash-cont">
 <ul class="nav nav-tabs admin_dash" style="margin-bottom: 15px;">
-  <li><a href="#home" data-toggle="tab">Users</a></li>
+  <li><%= link_to "Users", users_admins_path, class: "black-text" %></li>
+
+  <% if current_admin_user.super_admin %>
+    <li><%= link_to "Admins", admin_users_admins_path, class: "black-text" %></li>
+  <% end %>
   <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
       Content Management <span class="caret"></span>
     </a>
     <ul class="dropdown-menu">
       <li><%= link_to "Fixtures", admin_fixtures_path %></li>
+      <li><%= link_to "Socials", admin_socials_path %></li>
+      <li><%= link_to "Recreational Runs", admin_rec_run_routes_path %></li>
       
     </ul>
   </li>
 </ul>
+</div>
+
+

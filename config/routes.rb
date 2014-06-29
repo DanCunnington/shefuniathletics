@@ -8,12 +8,24 @@ Shefuniathletics::Application.routes.draw do
    root 'welcome#index'
 
    resources :new_athletes
+
    resources :fixtures do
       get 'admin', on: :collection
-
    end
+
+   resources :socials do
+      get 'admin', on: :collection
+   end
+
+   resources :rec_run_routes do
+    get 'admin', on: :collection
+   end
+
    resources :admin_sessions, only: [:new, :create, :destroy]
-   resources :admins
+   resources :admins do 
+    get 'users', on: :collection
+    get 'admin_users', on: :collection
+   end
 
    get '/profile/:id' => 'users#profile', via: :get, as: 'profile'
    get '/splits/:id' => 'users#my_splits', via: :get, as: 'splits'
@@ -21,7 +33,7 @@ Shefuniathletics::Application.routes.draw do
 
    match '/newsletter', to: 'new_athletes#new', via: 'get'
    match '/training', to: 'welcome#training', via: 'get'
-   match '/runs', to: 'run_routes#index', via: 'get'
+   match '/runs', to: 'rec_run_routes#index', via: 'get'
    match '/membership', to: 'welcome#membership', via: 'get'
    match '/committee', to: 'welcome#committee', via: 'get'
    match '/coaches', to: 'welcome#coaches', via: 'get'

@@ -38,3 +38,17 @@ $(function() {
 	
 	
 });
+
+function dateFieldDefaultFixture() {
+	var x = document.getElementById("fixture_date");
+	if (x.innerHTML == "") {
+		x.value = "Please Choose a Date";
+	}
+}
+
+function dateFieldDefaultSocial() {
+	var x = document.getElementById("social_date");
+	if (x.innerHTML == "") {
+		x.value = "Please Choose a Date";
+	}
+}
