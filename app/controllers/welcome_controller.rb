@@ -20,7 +20,11 @@ class WelcomeController < ApplicationController
 
 	end
 
-	def socials
+	def history
+
+	end
+
+	def records
 
 	end
 

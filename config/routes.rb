@@ -41,6 +41,8 @@ Shefuniathletics::Application.routes.draw do
    match '/kit', to: 'welcome#kit', via: 'get'
    match '/fixtures', to: 'fixtures#index', via: 'get'
    match '/admin', to: 'welcome#admin', via: 'get'
+   match '/records', to: 'welcome#records', via: 'get'
+   match '/history', to: 'welcome#history', via: 'get'
 
    #Facebook omniauth session routes
    match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
