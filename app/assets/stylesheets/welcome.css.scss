@@ -13,7 +13,9 @@ h1.heading, h1.training {
 
 
 body {
-	background: url('bg1.png') top right no-repeat;
+	/*background: url('bg.png') top right no-repeat;*/
+	background-image: image-url('bg.png');
+	background-repeat: no-repeat;
   	background-position: center;
   	background-attachment: fixed;
   	background-size: cover;
