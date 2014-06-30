@@ -1,6 +1,6 @@
 Hey <%=@admin.first_name %>, you are now an admin of shefuniathletics.co.uk
 
-To access your account, please navigate to <%=@url%> and login with the following details:
+To access your account, please navigate to <%=link_to @url, @url%> and login with the following details:
 
 Email: <%= @admin.email %>
 Password: password123
