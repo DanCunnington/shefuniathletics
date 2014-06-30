@@ -22,6 +22,7 @@ include AdminSessionsHelper
 	def create
 		@admin = Admin.new(admin_params)
 		if @admin.save
+			UserMailer.admin_invite_email(@admin).deliver
 			flash[:success] = "Admin was successfully created"
 			redirect_to current_admin_user
 		else

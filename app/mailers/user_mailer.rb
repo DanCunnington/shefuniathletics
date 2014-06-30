@@ -8,4 +8,13 @@ class UserMailer < ActionMailer::Base
   	mail(to: "sympa@lists.shef.ac.uk", subject:'')
 
   end
+
+  def admin_invite_email(admin)
+
+  	@admin = admin
+  	@url = "http://www.shefuniathletics.co.uk/admin"
+  	mail(to: @admin.email, subject: "Your new shefuniathletics admin account!")
+
+
+  end
 end
