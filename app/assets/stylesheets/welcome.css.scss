@@ -98,6 +98,22 @@ body {
 	width: 100%;
 }
 
+.varsity-container {
+	max-width: 560px;
+	margin: 0 auto;
+	margin-top: 40.5px;
+	
+
+}
+iframe.varsity {
+	height: 315px;
+	width: 100%;
+	
+
+}
+
+
+
 #sport-sheffield{
 	width: 70px;
 	margin-bottom: 5px;
@@ -318,15 +334,48 @@ p.foot {
 	color: white !important;
 	font-family: 'Montserrat', sans-serif;	
 	margin:0 auto !important;
-    display:block;
+    display:inline-block;
     min-width: 212px;
     max-width: 212px;
     margin-top: 20px !important;
+
 
 	&:hover {
 		color: inherit !important;
 	};
 }
+
+.home-btn-group {
+	
+	margin: 0 auto !important;
+    max-width: 434px !important;
+    display: block!important;
+    text-align: center;
+}
+
+#fb-group-join {
+	background: #3a5897; /* Old browsers */
+	background: -moz-linear-gradient(top,  #3a5897 0%, #204083 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3a5897), color-stop(100%,#204083)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #3a5897 0%,#204083 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #3a5897 0%,#204083 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #3a5897 0%,#204083 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #3a5897 0%,#204083 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a5897', endColorstr='#204083',GradientType=0 ); /* IE6-9 */
+
+	&:hover {
+		background: #263452; /* Old browsers */
+		background: -moz-linear-gradient(top,  #263452 0%, #475778 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#263452), color-stop(100%,#475778)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #263452 0%,#475778 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #263452 0%,#475778 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #263452 0%,#475778 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #263452 0%,#475778 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#263452', endColorstr='#475778',GradientType=0 ); /* IE6-9 */
+	}
+}
+475778
+
 
 th {
 	color: gold;

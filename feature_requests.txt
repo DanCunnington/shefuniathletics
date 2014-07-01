@@ -5,7 +5,7 @@ TO-DO
 - Personal login area to view split times in training
 - Fill in static pages
 - Vinco Sport integration - Speak to Matthew Quine
-- Follow/Like buttons next to newsletter sign up buttons
+
 
 ---------------------------------------------
 DONE
@@ -13,3 +13,4 @@ DONE
 - Record of recent race results
 - Rec run routes
 - Calendar for upcoming races/events/socials
+- Follow/Like buttons next to newsletter sign up buttons
