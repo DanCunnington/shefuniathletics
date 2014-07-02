@@ -469,3 +469,12 @@ ul li a {
 
 
 }
+
+a.mail-link {
+	color: gold;
+
+	&:hover {
+		background-color: transparent;
+		text-decoration: none;
+	};
+}
