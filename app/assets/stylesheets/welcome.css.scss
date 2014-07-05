@@ -241,6 +241,16 @@ a {
     }
 }
 
+@media (max-width: 767px) {
+	p, h4.coach {
+		text-align: center;
+	}
+
+	br.two-em-spaced {
+		margin: 0;
+	}
+}
+
 /* COMMITTEE */
 
 img.committee-photos {
@@ -476,5 +486,64 @@ a.mail-link {
 	&:hover {
 		background-color: transparent;
 		text-decoration: none;
+	};
+}
+
+h4.gold {
+	color: gold;
+}
+
+img.coach-photos {
+	border: solid 5px white;
+	border-radius: 2px;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-bottom: 25px;
+
+}
+
+p {
+	line-height: 1.7;
+
+}
+
+a.kit-link {
+	color: gold;
+
+	&:hover {
+		text-decoration: none;
+		background-color: transparent;
+
+	};
+}
+
+
+
+p.center {
+	text-align: center;
+}
+
+.kit-img {
+	text-align: center;
+	padding-bottom: 20px;
+
+	img {
+		border: solid 5px white;
+	}
+
+
+	&:hover {
+
+		img {
+
+			border: solid 5px #E3A600;
+		}
+
+		h4 {
+			color: #E3A600;
+	
+		}
+
+
 	};
 }

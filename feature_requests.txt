@@ -2,9 +2,11 @@
 TO-DO
 --------------------------------------------
 
-- Personal login area to view split times in training
-- Fill in static pages
-- Vinco Sport integration - Speak to Matthew Quine
+- Training Split Times
+- Fill in static pages with info
+- Extend CMS to full site (e.g. committee page - look at amazon s3 to allow admin to upload images)
+- Output list of all new athletes that have signed up - pdf generation for admins maybe
+- Finish kit page - maybe link each item displayed to item page
 
 
 ---------------------------------------------
@@ -14,3 +16,8 @@ DONE
 - Rec run routes
 - Calendar for upcoming races/events/socials
 - Follow/Like buttons next to newsletter sign up buttons
+
+---------------------------------------------
+BLOCKS
+---------------------------------------------
+- Vinco Sport integration - Matt won't let us embed videos directly, but they are publically available on YouTube to embed anyway. Potenially showcase a few
