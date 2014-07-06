@@ -9,6 +9,7 @@ TO-DO
 - Error pages
 - SMTP settings in environment variables
 - Callums Bio
+- Validate rec run link
 
 ---------------------------------------------
 DONE
