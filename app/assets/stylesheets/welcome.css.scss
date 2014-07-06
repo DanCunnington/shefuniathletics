@@ -48,6 +48,11 @@ body {
 	margin-top: 2em;
 }
 
+.one-em-spaced {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
 .field_with_errors {
 	background: none;
 	width: 100%;
@@ -551,4 +556,8 @@ p.center {
 p.kit-para {
 	max-width: 520px;
 	margin: 0 auto;
+}
+
+ul.history li  {
+	font-family: 'Montserrat', sans-serif;
 }
