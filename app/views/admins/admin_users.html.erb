@@ -20,8 +20,12 @@
       <td><%= user.created_at.to_formatted_s(:long) %></td>
       <% if !user.super_admin %>
         <td><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger edit-btn" %></td>
+        <td></td>
+      <% else %>
+        <td></td>
+        <td></td>
       <% end %>
-    </tr>
+      </tr>
     <% end %>
   </tbody>
 </table>  
