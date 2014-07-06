@@ -6,8 +6,8 @@ TO-DO
 - Fill in static pages with info
 - Extend CMS to full site (e.g. committee page - look at amazon s3 to allow admin to upload images)
 - Output list of all new athletes that have signed up - pdf generation for admins maybe
-- Finish kit page - maybe link each item displayed to item page
-
+- Icon
+- Error pages
 
 ---------------------------------------------
 DONE
@@ -16,6 +16,7 @@ DONE
 - Rec run routes
 - Calendar for upcoming races/events/socials
 - Follow/Like buttons next to newsletter sign up buttons
+- Finish kit page - maybe link each item displayed to item page
 
 ---------------------------------------------
 BLOCKS

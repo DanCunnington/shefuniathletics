@@ -28,5 +28,9 @@ class WelcomeController < ApplicationController
 
 	end
 
+	def beginners_run_group
+
+	end
+
 
 end

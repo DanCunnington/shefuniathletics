@@ -16,7 +16,7 @@ include AdminSessionsHelper
 	def destroy
 		
 		sign_out_admin
-		flash[:danger] = "You have signed out of your admin account."
+		flash[:success] = "You have signed out of your admin account."
     	redirect_to root_url
 	end
 

@@ -38,4 +38,20 @@ difficulty
 ---------------
 grade :: string (Easy, Medium, Hard)
 
+records
+---------------
+event :: string
+type :: string 
+athlete :: string
+time :: string
+competition :: string
+
+event
+---------------
+description :: string (100m, 200m etc)
+
+event_type
+---------------
+description :: string (MO, MI, FO, FI)
+
 

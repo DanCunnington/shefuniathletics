@@ -21,6 +21,10 @@ Shefuniathletics::Application.routes.draw do
     get 'admin', on: :collection
    end
 
+   resources :records do
+    get 'admin', on: :collection
+  end
+
    resources :admin_sessions, only: [:new, :create, :destroy]
    resources :admins do 
     get 'users', on: :collection
@@ -37,12 +41,13 @@ Shefuniathletics::Application.routes.draw do
    match '/membership', to: 'welcome#membership', via: 'get'
    match '/committee', to: 'welcome#committee', via: 'get'
    match '/coaches', to: 'welcome#coaches', via: 'get'
-   match '/socials', to: 'welcome#socials', via: 'get'
+   match '/socials', to: 'socials#index', via: 'get'
    match '/kit', to: 'welcome#kit', via: 'get'
    match '/fixtures', to: 'fixtures#index', via: 'get'
    match '/admin', to: 'welcome#admin', via: 'get'
-   match '/records', to: 'welcome#records', via: 'get'
+   match '/records', to: 'records#index', via: 'get'
    match '/history', to: 'welcome#history', via: 'get'
+   match '/beginners', to: 'welcome#beginners_run_group', via: 'get'
 
    #Facebook omniauth session routes
    match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
