@@ -29,6 +29,7 @@ Shefuniathletics::Application.routes.draw do
    resources :admins do 
     get 'users', on: :collection
     get 'admin_users', on: :collection
+    get 'new_athletes', on: :collection
    end
 
    get '/profile/:id' => 'users#profile', via: :get, as: 'profile'

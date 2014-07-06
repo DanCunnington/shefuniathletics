@@ -1,0 +1,27 @@
+<h1 class="heading">New Athletes</h1>
+<%= render 'layouts/admin_dash' %>
+
+<% if @athletes != [] %> 
+<div class="panel panel-default table-responsive">
+  <table class="table table-hover">  
+    <thead>  
+      <tr>    
+        <th>Name</th>
+        <th>Email</th>
+        <th>Joined</th>
+      </tr>  
+    </thead>  
+    <tbody>  
+     <% @athletes.each do |user| %>
+     <tr>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.created_at.to_formatted_s(:long) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>  
+</div>
+<% else %>
+<p>No New Athletes.</p>
+<% end %>

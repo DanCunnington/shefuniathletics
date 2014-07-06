@@ -8,6 +8,7 @@ TO-DO
 - Output list of all new athletes that have signed up - pdf generation for admins maybe
 - Icon
 - Error pages
+- SMTP settings in environment variables
 
 ---------------------------------------------
 DONE

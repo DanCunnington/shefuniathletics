@@ -64,6 +64,10 @@ include AdminSessionsHelper
 		@users = Admin.all
 	end
 
+	def new_athletes
+		@athletes = NewAthlete.all
+	end
+
 
 	private
 
