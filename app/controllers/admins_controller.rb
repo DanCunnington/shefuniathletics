@@ -68,7 +68,6 @@ include AdminSessionsHelper
 		@athletes = NewAthlete.all
 	end
 
-
 	private
 
 	def admin_params

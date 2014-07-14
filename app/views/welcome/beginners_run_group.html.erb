@@ -1,3 +1,13 @@
 <h1 class="heading">Beginners Run Group</h1>
 
-<p class="center-text">Join the beginners facebook group <%= link_to "here", "https://www.facebook.com/groups/336754123137998/", class: "facebook-group-link" %></p>
+<p class="center-text">
+<% if !@text.blank?%>
+<%=raw @text%>
+
+<br class="spaced">
+<% end %>
+Join the dedicated facebook group <%= link_to "here", "https://www.facebook.com/groups/336754123137998/", class: "facebook-group-link" %>.
+
+
+
+</p>

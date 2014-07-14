@@ -54,4 +54,7 @@ event_type
 ---------------
 description :: string (MO, MI, FO, FI)
 
-
+info_page
+---------------
+key :: string
+value :: text

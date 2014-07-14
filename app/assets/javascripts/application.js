@@ -18,4 +18,5 @@
 //= require zebra-datepicker/core
 $(document).ready(function(){
     $('input').tooltip();
+    $('textarea').tooltip();
 });

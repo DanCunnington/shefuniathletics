@@ -111,3 +111,8 @@ female_outdoor.save
 
 female_indoor = EventType.new(description: "Female Indoor")
 female_indoor.save
+
+beginners_text = InfoPage.new(key: "beginners_run_group", value:"Hey, this is the beginners run group")
+beginners_text.save
+
+membership_text = InfoPage.new(key: "membership", value:"Hey, join our club")

@@ -1,0 +1,32 @@
+
+<h1 class="heading">Other Content</h1>
+
+<%= render 'layouts/admin_dash' %>
+
+
+<% if @info_pages != [] %> 
+<div class="panel panel-default table-responsive">
+  <table class="table table-hover">  
+    <thead>  
+      <tr>    
+        <th>Key</th>
+        <th>Value</th>
+        <th></th>
+        <th></th>
+      </tr>  
+    </thead>  
+    <tbody>  
+     <% @info_pages.each do |info_page| %>
+     <tr>
+      <td><%= info_page.key %></td>
+      <td><%= info_page.value %></td>
+       <td><%= link_to 'Edit', edit_info_page_path(info_page), class:"btn btn-info edit-btn", "data-no-turbolink" => true  %></td>
+      <td><%= link_to 'Delete', info_page, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger edit-btn" %></td>   
+    </tr>
+    <% end %>
+  </tbody>
+</table>  
+</div>
+<% else %>
+<p>Page Content will appear shortly.</p>
+<% end %>
