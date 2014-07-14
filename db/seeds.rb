@@ -7,12 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-#Prevent duplicates
-Admin.delete_all
-Difficulty.delete_all
-Event.delete_all
-EventType.delete_all
-InfoPage.delete_all
 
 x = Admin.new(first_name: "Dan", email: "dcunnington1@sheffield.ac.uk", password: "password123",
 				password_confirmation: "password123", super_admin: true)
