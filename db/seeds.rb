@@ -5,6 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+#Prevent duplicates
+Admin.delete_all
+Difficulty.delete_all
+Event.delete_all
+EventType.delete_all
+InfoPage.delete_all
+
 x = Admin.new(first_name: "Dan", email: "dcunnington1@sheffield.ac.uk", password: "password123",
 				password_confirmation: "password123", super_admin: true)
 x.save
@@ -116,3 +125,4 @@ beginners_text = InfoPage.new(key: "beginners_run_group", value:"Hey, this is th
 beginners_text.save
 
 membership_text = InfoPage.new(key: "membership", value:"Hey, join our club")
+membership_text.save
