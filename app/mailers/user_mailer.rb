@@ -12,7 +12,7 @@ class UserMailer < ActionMailer::Base
   def admin_invite_email(admin)
 
   	@admin = admin
-  	@url = "http://new.shefuniathletics.co.uk/admin"
+  	@url = "http://www.shefuniathletics.co.uk/admin"
   	mail(to: @admin.email, subject: "Your new shefuniathletics admin account!")
 
 
