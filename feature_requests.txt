@@ -5,7 +5,6 @@ TO-DO
 - Training Split Times
 - Fill in static pages with info
 - Extend CMS to full site (e.g. committee page - look at amazon s3 to allow admin to upload images)
-- Error pages
 - SMTP settings in environment variables
 - Callums Bio
 - Validate rec run link
