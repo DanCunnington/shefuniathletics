@@ -6,8 +6,6 @@ TO-DO
 - Fill in static pages with info
 - Extend CMS to full site (e.g. committee page - look at amazon s3 to allow admin to upload images)
 - SMTP settings in environment variables
-- Callums Bio
-- Validate rec run link
 
 ---------------------------------------------
 DONE
@@ -18,6 +16,8 @@ DONE
 - Follow/Like buttons next to newsletter sign up buttons
 - Finish kit page - maybe link each item displayed to item page
 - Output list of all new athletes that have signed up
+- Callums Bio
+- Validate rec run link
 
 ---------------------------------------------
 BLOCKS
