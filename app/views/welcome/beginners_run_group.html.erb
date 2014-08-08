@@ -1,13 +1,18 @@
 <h1 class="heading">Beginners Run Group</h1>
+<div class="row">
 
+
+<div class="col-md-5">
+<%= image_tag "parkrun.png", class:"parkrun"%>
+</div>
+
+<div class="col-md-7">
 <p class="center-text">
 <% if !@text.blank?%>
 <%=raw @text%>
 
-<br class="spaced">
 <% end %>
-Join the dedicated facebook group <%= link_to "here", "https://www.facebook.com/groups/336754123137998/", class: "facebook-group-link" %>.
-
-
 
 </p>
+</div>
+</div>
