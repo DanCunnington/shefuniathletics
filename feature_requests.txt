@@ -3,9 +3,11 @@ TO-DO
 --------------------------------------------
 
 - Training Split Times
-- Fill in static pages with info
+- Fill in membership and beginners run group
 - Extend CMS to full site (e.g. committee page - look at amazon s3 to allow admin to upload images)
-- SMTP settings in environment variables
+- SMTP settings in environment variables, have to edit it on heroku.
+- Renew Domain
+- Look at removing facebook link to log in. Or implement split times
 
 ---------------------------------------------
 DONE
