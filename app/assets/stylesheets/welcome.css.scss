@@ -563,8 +563,12 @@ ul.history li  {
 	font-family: 'Montserrat', sans-serif;
 }
 
-img.parkrun {
+img.parkrun, img.membership {
 	max-width: 400px;
 	border: solid 5px white;
 	border-radius: 2px;
+}
+
+span.gold {
+	color: gold;
 }

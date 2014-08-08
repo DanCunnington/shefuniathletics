@@ -3,8 +3,8 @@ TO-DO
 --------------------------------------------
 
 - Training Split Times
-- Fill in membership and beginners run group
-- Extend CMS to full site (e.g. committee page - look at amazon s3 to allow admin to upload images)
+- Fill in membership page
+- Extend CMS to full site (e.g. committee page - look at amazon s3 to 	 allow admin to upload images)
 - SMTP settings in environment variables, have to edit it on heroku.
 - Renew Domain
 
@@ -20,6 +20,7 @@ DONE
 - Callums Bio
 - Validate rec run link
 - Look at removing facebook link to log in. Or implement split times
+- Fill in beginners run group page
 
 ---------------------------------------------
 BLOCKS
