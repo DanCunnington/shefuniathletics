@@ -1,0 +1,613 @@
+/* line 6, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+h1.heading, h1.training {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+/* line 15, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+body {
+  background: url("bg2.png") top right no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #131313;
+  height: 100%;
+  color: whitesmoke;
+  margin-top: 50px;
+}
+
+/* line 27, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.standard_page {
+  background: none !important;
+}
+
+/* line 32, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.signup_cont {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+/* line 39, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.clear {
+  clear: both;
+}
+
+/* line 43, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.spaced {
+  margin-top: 3em;
+}
+
+/* line 47, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.two-em-spaced {
+  margin-top: 2em;
+}
+
+/* line 51, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.one-em-spaced {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* line 56, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.field_with_errors {
+  background: none;
+  width: 100%;
+  clear: none;
+}
+
+/* line 62, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.field_with_errors input, .field_with_errors textarea, .field_with_errors select {
+  border-color: #FF0000;
+}
+
+/* line 67, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#error_explanation {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0.5em;
+  max-width: 400px;
+  width: auto !important;
+}
+/* line 75, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#error_explanation ul {
+  padding-top: 10px;
+}
+
+/* line 80, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.alert {
+  margin-top: 1em;
+}
+
+/* line 84, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.training-locations {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* line 91, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#training-map {
+  height: 500px;
+  width: 100%;
+}
+
+/* line 96, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.rec-run-route-cont {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* line 102, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.rec-run-route {
+  height: 350px;
+  width: 100%;
+}
+
+/* line 107, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.varsity-container {
+  max-width: 560px;
+  margin: 0 auto;
+  margin-top: 40.5px;
+}
+
+/* line 114, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+iframe.varsity {
+  height: 315px;
+  width: 100%;
+}
+
+/* line 123, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#sport-sheffield {
+  width: 70px;
+  margin-bottom: 5px;
+  margin-right: 20px;
+  margin-left: 15px;
+  display: inline;
+}
+
+/* line 133, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#nav-top-cont {
+  min-width: 269px;
+  margin-top: 10px;
+}
+
+/* line 138, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#uni {
+  width: 70px;
+  margin-left: 20px;
+  margin-right: 30px;
+  margin-top: 8px;
+}
+
+/* line 145, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+h3.nav_head {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+/* line 152, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+h4.nav_head {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0px;
+  margin-right: 15px;
+}
+
+/* line 161, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.img-40-r {
+  height: 40px;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+
+/* line 168, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#user-profile-dropdown {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* line 173, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#nav_athletics_head {
+  margin-top: 15px;
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 10px;
+  display: inline;
+  min-width: 149px;
+}
+
+/* line 184, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.navbar {
+  border-radius: 0px;
+}
+
+/* line 188, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+a.no-style {
+  color: inherit !important;
+}
+/* line 191, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+a.no-style:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* line 199, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+a:hover {
+  color: gold !important;
+}
+
+/* line 204, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#fb {
+  width: 30px;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+/* line 211, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#sign_in {
+  display: inline-block;
+}
+
+@media (max-width: 991px) {
+  /* line 217, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+  .navbar-header {
+    float: none;
+  }
+
+  /* line 220, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+  .navbar-toggle {
+    display: block;
+  }
+
+  /* line 223, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* line 227, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  /* line 230, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+  .navbar-nav {
+    float: none !important;
+    margin: 7.5px -15px;
+  }
+
+  /* line 234, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+  .navbar-nav > li {
+    float: none;
+  }
+
+  /* line 237, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* since 3.1.0 */
+  /* line 242, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+
+  /* line 245, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+  .collapsing {
+    overflow: hidden !important;
+  }
+}
+@media (max-width: 767px) {
+  /* line 251, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+  p, h4.coach {
+    text-align: center;
+  }
+
+  /* line 255, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+  br.two-em-spaced {
+    margin: 0;
+  }
+}
+/* COMMITTEE */
+/* line 262, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+img.committee-photos {
+  border: solid 5px white;
+  border-radius: 2px;
+  margin: 0 auto;
+}
+
+/* line 272, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.committee-person:hover img {
+  border: solid 5px #E3A600;
+}
+/* line 277, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.committee-person:hover h4 {
+  color: #E3A600;
+}
+
+/* line 287, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+h4.montserrat, p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 291, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+h4.committee-pos-title {
+  text-align: center;
+}
+
+/* line 295, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.spaced {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 300, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#foot {
+  margin-bottom: 20px;
+  color: white;
+  clear: both;
+}
+
+/* line 308, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#fb-sign-in {
+  background: #3a5897;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #3a5897 0%, #204083 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3a5897), color-stop(100%, #204083));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #3a5897 0%, #204083 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #3a5897 0%, #204083 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #3a5897 0%, #204083 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #3a5897 0%, #204083 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a5897', endColorstr='#204083',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 321, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#twitter-widget-0 {
+  margin: 0 auto !important;
+  display: block;
+}
+
+/* line 326, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+p.foot {
+  margin-top: 40px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  border-top: solid 1px whitesmoke;
+  clear: both;
+}
+
+/* line 334, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.tooltip-inner {
+  color: black;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* line 340, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.modal-open {
+  overflow: visible;
+}
+
+/* line 344, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.modal-title {
+  color: #E3A600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 349, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.newsletter-sign-up-button {
+  color: white !important;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto !important;
+  display: inline-block;
+  min-width: 212px;
+  max-width: 212px;
+  margin-top: 20px !important;
+}
+/* line 359, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.newsletter-sign-up-button:hover {
+  color: inherit !important;
+}
+
+/* line 364, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.home-btn-group {
+  margin: 0 auto !important;
+  max-width: 434px !important;
+  display: block !important;
+  text-align: center;
+}
+
+/* line 372, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#fb-group-join {
+  background: #3a5897;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #3a5897 0%, #204083 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3a5897), color-stop(100%, #204083));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #3a5897 0%, #204083 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #3a5897 0%, #204083 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #3a5897 0%, #204083 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #3a5897 0%, #204083 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a5897', endColorstr='#204083',GradientType=0 );
+  /* IE6-9 */
+}
+/* line 382, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#fb-group-join:hover {
+  background: #263452;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #263452 0%, #475778 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #263452), color-stop(100%, #475778));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #263452 0%, #475778 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #263452 0%, #475778 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #263452 0%, #475778 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #263452 0%, #475778 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#263452', endColorstr='#475778',GradientType=0 );
+  /* IE6-9 */
+}
+
+/* line 396, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+th {
+  color: gold;
+  text-align: center;
+}
+
+/* line 401, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+table {
+  text-align: center;
+}
+
+/* line 405, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+td a:hover {
+  background-color: transparent;
+}
+
+/* line 412, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+#new_fix, #new_soc {
+  color: white;
+}
+
+/* line 416, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.rec-run-button {
+  color: white !important;
+  max-width: 100px;
+  display: inline-block !important;
+}
+/* line 421, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.rec-run-button:hover {
+  color: white !important;
+}
+
+/* line 426, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.edit-btn {
+  text-decoration: none !important;
+  color: white !important;
+}
+/* line 430, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.edit-btn:hover {
+  color: white !important;
+}
+
+/* line 435, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+td {
+  vertical-align: middle !important;
+}
+
+/* line 440, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.Zebra_DatePicker {
+  z-index: 2;
+  top: 40px !important;
+}
+
+/* line 445, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.navbar {
+  z-index: 1 !important;
+}
+
+/* line 449, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.Zebra_DatePicker_Icon {
+  border-radius: 2px;
+  background-color: gold;
+  margin-right: 10px !important;
+  height: 20px !important;
+  width: 20px !important;
+  border: solid 1px black !important;
+}
+
+/* line 459, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+ul li a {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 463, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.admin-dash-cont {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+}
+
+/* line 469, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.black-text {
+  color: black !important;
+}
+
+/* line 473, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.center-text {
+  text-align: center;
+}
+
+/* line 477, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.facebook-group-link {
+  color: gold !important;
+}
+/* line 480, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.facebook-group-link:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* line 489, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+a.mail-link {
+  color: gold;
+}
+/* line 492, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+a.mail-link:hover {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* line 498, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+h4.gold {
+  color: gold;
+}
+
+/* line 502, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+img.coach-photos {
+  border: solid 5px white;
+  border-radius: 2px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+/* line 511, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+p {
+  line-height: 1.7;
+}
+
+/* line 516, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+a.kit-link {
+  color: gold;
+}
+/* line 519, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+a.kit-link:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* line 528, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+p.center {
+  text-align: center;
+}
+
+/* line 532, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.kit-img {
+  text-align: center;
+  padding-bottom: 20px;
+}
+/* line 536, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.kit-img img {
+  border: solid 5px white;
+}
+/* line 543, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.kit-img:hover img {
+  border: solid 5px #E3A600;
+}
+/* line 548, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+.kit-img:hover h4 {
+  color: #E3A600;
+}
+
+/* line 557, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+p.kit-para {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* line 562, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+ul.history li {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 566, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+img.parkrun, img.membership {
+  max-width: 100%;
+  border: solid 5px white;
+  border-radius: 2px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 574, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/welcome.css.scss */
+span.gold {
+  color: gold;
+}
