@@ -564,9 +564,11 @@ ul.history li  {
 }
 
 img.parkrun, img.membership {
-	max-width: 400px;
+	max-width: 100%;
 	border: solid 5px white;
 	border-radius: 2px;
+	display: block;
+	margin: 0 auto;
 }
 
 span.gold {

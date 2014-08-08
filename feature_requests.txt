@@ -7,6 +7,7 @@ TO-DO
 - Extend CMS to full site (e.g. committee page - look at amazon s3 to 	 allow admin to upload images)
 - SMTP settings in environment variables, have to edit it on heroku.
 - Renew Domain
+- Get Rachael, Simon and Ant to add in socials and fixtures
 
 ---------------------------------------------
 DONE
