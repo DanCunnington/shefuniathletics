@@ -7,7 +7,6 @@ TO-DO
 - Extend CMS to full site (e.g. committee page - look at amazon s3 to allow admin to upload images)
 - SMTP settings in environment variables, have to edit it on heroku.
 - Renew Domain
-- Look at removing facebook link to log in. Or implement split times
 
 ---------------------------------------------
 DONE
@@ -20,6 +19,7 @@ DONE
 - Output list of all new athletes that have signed up
 - Callums Bio
 - Validate rec run link
+- Look at removing facebook link to log in. Or implement split times
 
 ---------------------------------------------
 BLOCKS
