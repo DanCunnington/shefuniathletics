@@ -5,7 +5,7 @@ class FixturesController < ApplicationController
   # GET /fixtures
   # GET /fixtures.json
   def index
-    @fixtures = Fixture.all
+    @fixtures = Fixture.all.order(date: :desc)
   end
 
  
@@ -64,7 +64,7 @@ class FixturesController < ApplicationController
 
 
   def admin
-    @fixtures = Fixture.all
+    @fixtures = Fixture.all.order(date: :desc)
   end
 
   private

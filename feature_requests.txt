@@ -8,6 +8,7 @@ TO-DO
 - SMTP settings in environment variables, have to edit it on heroku.
 - Renew Domain
 - Get Rachael, Simon and Ant to add in socials and fixtures
+- Add dynamic date to footer
 
 ---------------------------------------------
 DONE
@@ -21,7 +22,8 @@ DONE
 - Callums Bio
 - Validate rec run link
 - Look at removing facebook link to log in. Or implement split times
-- Fill in beginners run group page
+- Fill
+ in beginners run group page
 
 ---------------------------------------------
 BLOCKS
