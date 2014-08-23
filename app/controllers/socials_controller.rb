@@ -5,7 +5,7 @@ class SocialsController < ApplicationController
   # GET /socials
   # GET /socials.json
   def index
-    @socials = Social.all.order(date: :desc)
+    @socials = Social.all.order(date: :asc)
     
   end
 
@@ -65,7 +65,7 @@ class SocialsController < ApplicationController
 
 
   def admin
-    @socials = Social.all.order(date: :desc)
+    @socials = Social.all.order(date: :asc)
   end
 
   private
