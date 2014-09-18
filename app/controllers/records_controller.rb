@@ -5,10 +5,10 @@ class RecordsController < ApplicationController
   # GET /records
   # GET /records.json
   def index
-    @male_outdoors = Record.where(event_type: "Male Outdoor")
-    @male_indoors = Record.where(event_type: "Male Indoor")
-    @female_outdoors = Record.where(event_type: "Female Outdoor")
-    @female_indoors = Record.where(event_type: "Female Indoor")
+    @male_outdoors = Record.where(event_type: "Male Outdoor").order(created_at: :asc)
+    @male_indoors = Record.where(event_type: "Male Indoor").order(created_at: :asc)
+    @female_outdoors = Record.where(event_type: "Female Outdoor").order(created_at: :asc)
+    @female_indoors = Record.where(event_type: "Female Indoor").order(created_at: :asc)
   end
 
  
