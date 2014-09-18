@@ -248,7 +248,7 @@ a {
 }
 
 @media (max-width: 767px) {
-	p, h4.coach {
+	p, h4.coach, h4.record {
 		text-align: center;
 	}
 
@@ -573,4 +573,19 @@ img.parkrun, img.membership {
 
 span.gold {
 	color: gold;
+}
+
+a.record-title {
+	font-family: "Montserrat";
+	&:hover {
+		background-color: transparent;
+	}
+}
+
+h4.sub {
+	font-size: 1.2em;
+}
+
+span.marathon {
+	font-size: 1.1em;
 }

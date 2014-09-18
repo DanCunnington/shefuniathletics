@@ -84,7 +84,7 @@ p.save
 q = Event.new(description: "Pole Vault")
 q.save
 
-r = Event.new(description: "Shot Put")
+r = Event.new(description: "Shot Putt")
 r.save
 
 s = Event.new(description: "Javelin")

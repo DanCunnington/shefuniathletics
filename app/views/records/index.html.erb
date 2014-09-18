@@ -1,113 +1,236 @@
 <h1 class="heading">Club Records</h1>
 
-<h4 class="montserrat gold">Male Outdoor</h4>
-<% if @male_outdoors != [] %> 
-<div class="panel panel-default table-responsive">
-  <table class="table table-hover">  
-    <thead>  
-      <tr>    
-        <th>Event</th>
-        <th>Athlete</th>
-        <th>Time</th>
-        <th>Competition</th> 
-      </tr>  
-    </thead>  
-    <tbody>  
-     <% @male_outdoors.each do |record| %>
-     <tr>
-      <td><%= record.event %></td>
-      <td><%= record.athlete %></td>
-      <td><%= record.time %></td>
-      <td><%= record.competition %></td>  
-    </tr>
-    <% end %>
-  </tbody>
-</table>  
-</div>
-<% else %>
-<p>Male Outdoor Records will appear shortly.</p>
-<% end %>
+<h4 class="montserrat gold record">Background</h4>
+<p class="records-background">
+  Performances that have been achieved while competing for the University in a team event are eligible for club record purposes. Open meetings do not count as students often enter these as representing their home athletics club and keeping track of this over past years is an impossible task.<br><br>
 
-<h4 class="montserrat gold">Male Indoor</h4>
-<% if @male_indoors != [] %> 
-<div class="panel panel-default table-responsive">
-  <table class="table table-hover">  
-    <thead>  
-      <tr>    
-        <th>Event</th>
-        <th>Athlete</th>
-        <th>Time</th>
-        <th>Competition</th>
-      </tr>  
-    </thead>  
-    <tbody>  
-     <% @male_indoors.each do |record| %>
-     <tr>
-      <td><%= record.event %></td>
-      <td><%= record.athlete %></td>
-      <td><%= record.time %></td>
-      <td><%= record.competition %></td>  
-    </tr>
-    <% end %>
-  </tbody>
-</table>  
-</div>
-<% else %>
-<p>Male Indoor Records will appear shortly.</p>
-<% end %>
+  So, currently, all BUCS events count, as do Steel Cup, Varsity and any other non-open events that we may compete in. For example, in the past there was a separate Northern Universities championships and there was an outdoor equivalent to the Steel Cup in Leeds about 8 years ago.<br><br>
+  Searching through archives is still ongoing, so if anyone knows of a performance that is not listed here then please get in touch with us.<br><br>
 
-<h4 class="montserrat gold">Female Outdoor</h4>
-<% if @female_outdoors != [] %> 
-<div class="panel panel-default table-responsive">
-  <table class="table table-hover">  
-    <thead>  
-      <tr>    
-        <th>Event</th>
-        <th>Athlete</th>
-        <th>Time</th>
-        <th>Competition</th> 
-      </tr>  
-    </thead>  
-    <tbody>  
-     <% @female_outdoors.each do |record| %>
-     <tr>
-      <td><%= record.event %></td>
-      <td><%= record.athlete %></td>
-      <td><%= record.time %></td>
-      <td><%= record.competition %></td>  
-    </tr>
-    <% end %>
-  </tbody>
-</table>  
-</div>
-<% else %>
-<p>Female Outdoor Records will appear shortly.</p>
-<% end %>
+  The records are for Indoor Track, Outdoor Track and also Road and Cross Country, both for Male and Female.
+  Abbreviations used are:<br><br>
+  UAU - <i>Universities Athletic Union</i><br>
+  BUSF - <i>British Universities Sports Federation</i><br>
+  BUSA - <i>British Universities Sports Association</i><br>
+  BUCS - <i>British Universities & Colleges Sport</i><br>
 
-<h4 class="montserrat gold">Female Indoor</h4>
-<% if @female_indoors!= [] %> 
-<div class="panel panel-default table-responsive">
-  <table class="table table-hover">  
-    <thead>  
-      <tr>    
-        <th>Event</th>
-        <th>Athlete</th>
-        <th>Time</th>
-        <th>Competition</th> 
-      </tr>  
-    </thead>  
-    <tbody>  
-     <% @female_indoors.each do |record| %>
-     <tr>
-      <td><%= record.event %></td>
-      <td><%= record.athlete %></td>
-      <td><%= record.time %></td>
-      <td><%= record.competition %></td>  
-    </tr>
-    <% end %>
-  </tbody>
-</table>  
-</div>
-<% else %>
-<p>Female Indoor Records will appear shortly.</p>
-<% end %>
+
+
+</p><br>
+
+<h4 class="montserrat gold record">Track and Field</h4>
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#maleoutdoor" class="record-title">
+          Male Outdoor
+        </a>
+      </h4>
+    </div>
+    <div id="maleoutdoor" class="panel-collapse collapse">
+      <div class="panel-body">
+      
+      <% if @male_outdoors != [] %> 
+      <div class="table-responsive">
+        <table class="table table-hover">  
+          <thead>  
+            <tr>    
+              <th>Event</th>
+              <th>Athlete</th>
+              <th>Time</th>
+              <th>Competition</th> 
+            </tr>  
+          </thead>  
+          <tbody>  
+           <% @male_outdoors.each do |record| %>
+           <tr>
+            <td><%= record.event %></td>
+            <td><%= record.athlete %></td>
+            <td><%= record.time %></td>
+            <td><%= record.competition %></td>  
+          </tr>
+          <% end %>
+        </tbody>
+      </table>  
+      </div>
+      <% else %>
+      <p>Male Outdoor Records will appear shortly.</p>
+      <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#femaleoutdoor" class="record-title">
+          Female Outdoor
+        </a>
+      </h4>
+    </div>
+    <div id="femaleoutdoor" class="panel-collapse collapse">
+      <div class="panel-body">
+    
+        <% if @female_outdoors != [] %> 
+        <div class="table-responsive">
+          <table class="table table-hover">  
+            <thead>  
+              <tr>    
+                <th>Event</th>
+                <th>Athlete</th>
+                <th>Time</th>
+                <th>Competition</th> 
+              </tr>  
+            </thead>  
+            <tbody>  
+             <% @female_outdoors.each do |record| %>
+             <tr>
+              <td><%= record.event %></td>
+              <td><%= record.athlete %></td>
+              <td><%= record.time %></td>
+              <td><%= record.competition %></td>  
+            </tr>
+            <% end %>
+          </tbody>
+        </table>  
+        </div>
+        <% else %>
+        <p>Female Outdoor Records will appear shortly.</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#maleindoor" class="record-title">
+          Male Indoor
+        </a>
+      </h4>
+    </div>
+    <div id="maleindoor" class="panel-collapse collapse">
+      <div class="panel-body">
+        <% if @male_indoors != [] %> 
+        <div class="table-responsive">
+          <table class="table table-hover">  
+            <thead>  
+              <tr>    
+                <th>Event</th>
+                <th>Athlete</th>
+                <th>Time</th>
+                <th>Competition</th>
+              </tr>  
+            </thead>  
+            <tbody>  
+             <% @male_indoors.each do |record| %>
+             <tr>
+              <td><%= record.event %></td>
+              <td><%= record.athlete %></td>
+              <td><%= record.time %></td>
+              <td><%= record.competition %></td>  
+            </tr>
+            <% end %>
+          </tbody>
+        </table>  
+        </div>
+        <% else %>
+        <p>Male Indoor Records will appear shortly.</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#femaleindoor" class="record-title">
+          Female Indoor
+        </a>
+      </h4>
+    </div>
+    <div id="femaleindoor" class="panel-collapse collapse">
+      <div class="panel-body">
+        
+        <% if @female_indoors!= [] %> 
+        <div class="table-responsive">
+          <table class="table table-hover">  
+            <thead>  
+              <tr>    
+                <th>Event</th>
+                <th>Athlete</th>
+                <th>Time</th>
+                <th>Competition</th> 
+              </tr>  
+            </thead>  
+            <tbody>  
+             <% @female_indoors.each do |record| %>
+             <tr>
+              <td><%= record.event %></td>
+              <td><%= record.athlete %></td>
+              <td><%= record.time %></td>
+              <td><%= record.competition %></td>  
+            </tr>
+            <% end %>
+          </tbody>
+        </table>  
+        </div>
+        <% else %>
+        <p>Female Indoor Records will appear shortly.</p>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<h4 class="montserrat gold record">Cross Country</h4>
+
+<h4 class="montserrat gold record sub">
+  Male
+</h4>
+<p>
+  We’ve had 2 individual overall winners of the University championships:<br><br>
+
+  J.Hacking in 1927 and M.Hamilton in 1936.<br><br>
+
+  In 1967 the complex nature of University sport meant that 2 championships were held in the same race (UAU and BUSF). Most universities were in both organisations but some were in one and not the other. R. Newble won the UAU title and came 5th in the BUSF race.<br><br>
+
+  Similarly, in 1972 Sheffield won the UAU team prize but were second in the BUSF championships, this is our best ever performance as a male team.
+
+</p>
+<h4 class="montserrat gold record sub">
+  Female
+</h4>
+<p>
+
+Hatti Dean won in 2005.<br><br>
+The ladies won the overall team prize in 1997.
+
+</p><br>
+
+<h4 class="montserrat gold record">Road</h4>
+
+<h4 class="montserrat gold record sub">Marathon</h4>
+
+<p>University Marathon championships started in the 1980s our best performances in these championships are:<br><br>
+
+<span class="marathon">Male</span><br>
+Graham Gagg in 2011 with a time of 2.45.46<br><br>
+
+<span class="marathon">Female</span><br>
+Jenn Dick in 2007 with a time of 3.09.45
+</p>
+<br>
+
+<h4 class="montserrat gold record sub">10k</h4>
+<p>
+There was briefly a University 10k road race in the 80s but this failed to take off and we’ve seen no results with Sheffield athletes competing. However, in 2012, the University started a Varsity 10k race which counts as points towards Varsity and the best performances for this so far from members of the club are:<br><br>
+
+<span class="marathon">Male</span><br>
+Dom Brown in 2014 with a time of 32.37<br><br>
+
+<span class="marathon">Female</span><br>
+Natasha Dawson in 2012 with a time of 39.57
+
+</p>
