@@ -17,12 +17,12 @@
 
   <div class="field">
     <%= f.label :event, class: "control-label" %><br />
-    <%= f.select(:event, Event.find(:all).collect {|u| [u.description]}.uniq, {}, {class: "form-control"})%>
+    <%= f.select(:event, Event.find(:all).collect {|u| [u.description]}, {}, {class: "form-control"})%>
   </div>
 
   <div class="field">
     <%= f.label :event_type, class: "control-label" %><br />
-    <%= f.select(:event_type, EventType.find(:all).collect {|u| [u.description]}.uniq, {}, {class: "form-control"})%>
+    <%= f.select(:event_type, EventType.find(:all).collect {|u| [u.description]}, {}, {class: "form-control"})%>
   </div>
   <div class="field">
     <%= f.label :athlete, class: "control-label" %><br />
