@@ -14,7 +14,7 @@
 14,Long Jump,Ricardo Childs,7.23m,BUSA 04,,,Male Outdoor
 15,Triple Jump,Jonathon Sawyers,15.51m,BUCS 13,,,Male Outdoor
 16,Pole Vault,Robin Hill,4.20m,BUSA 96,,,Male Outdoor
-17,Shot Putt,G. Pazdzierski,11.49m,UAU 80,,,Male Outdoor
+17,Shot Put,G. Pazdzierski,11.49m,UAU 80,,,Male Outdoor
 18,Javelin,Felix Hatton,70.99m,BUSA 08,,,Male Outdoor
 19,Discus,Luscome,37.84m,BUSF 94,,,Male Outdoor
 20,Hammer,Barry Crowther,52.71m,UAU 67,,,Male Outdoor
@@ -22,7 +22,7 @@
 22,60m,Ricardo Childs,6.99,BUSA 05,,,Male Indoor
 23,60mH,Mark Anderson,8.62,BUSA 98,,,Male Indoor
 24,200m,Richard Knowles,21.49,BUSA 97,,,Male Indoor
-25,400m,David Dempsey,48.4,BUCS 14,,,Male Indoor
+25,400m,David Dempsey,48.40,BUCS 14,,,Male Indoor
 26,800m,Curtis Robb,1.49.67,BUSA 97,,,Male Indoor
 27,1500m,Dom Brown,4.03.7 (hand timed),Varsity 14,,,Male Indoor
 28,1500m,Callum Chambers,4.08.40,BUCS 13,,,Male Indoor
@@ -33,42 +33,43 @@
 33,Long Jump,Ricardo Childs,7.41m,BUSA 05,,,Male Indoor
 34,Triple Jump,Charles Madeira-Cole,15.82m,BUSA 98,,,Male Indoor
 35,Pole Vault,Robin Hill/Kevin Treen,4.40m,BUSA 98,,,Male Indoor
-36,Shot Putt,Ciaran Dolan,11.53m,Varsity 14,,,Male Indoor
-37,100m,J.Honick,12.0,BUSF 74,,,Female Outdoor
+36,Shot Put,Ciaran Dolan,11.53m,Varsity 14,,,Male Indoor
+37,100m,J.Honick,12,BUSF 74,,,Female Outdoor
 38,100m,Yvette Henry,12.04,BUSA 00,,,Female Outdoor
 39,110mH,Rosie Marino,14.78,BUCS 12,,,Female Outdoor
 40,200m,Yvette Henry,24.93,BUSA 02,,,Female Outdoor
 41,400m,Amy Freeman,55.83,BUSA 05,,,Female Outdoor
 42,400mH,Hannah Wood,59.15,BUSA 03,,,Female Outdoor
-43,800m,Rosie Keane,2.17.13,BUCS 13,,,Female Outdoor
-44,1500m,Penny Thackray,4.37.36,BUSF 94,,,Female Outdoor
-45,3000m,Penny Thackray,9.44.54,BUSF 94,,,Female Outdoor
-46,2000mSC,Jodie Fielder,8.23.32,BUSA 98,,,Female Outdoor
-47,5000m,Penny Thackray,16.26.22,BUSA 96,,,Female Outdoor
-48,10km,Penny Thackray,34.48.59,BUSA 98,,,Female Outdoor
-49,4 x 100m Relay,-,51.88,BUCS 12,,,Female Outdoor
-50,4 x 400m Relay,-,4.04.38,BUCS 12,,,Female Outdoor
-51,High Jump,Lauren Tyrrell,1.66m,BUCS 13,,,Female Outdoor
-52,Long Jump,Jazmin Sawyers,6.07m,BUCS 13,,,Female Outdoor
-53,Triple Jump,Emily Stewart,11.00m,BUSF 93,,,Female Outdoor
-54,Pole Vault,-,-,-,,,Female Outdoor
-55,Shot Putt,Hilary Plummer,9.65m,BUSF 74,,,Female Outdoor
-56,Javelin,Angela King,49.18m,BUSF 73,,,Female Outdoor
-57,Discus,Rebecca Hardy,41.72m,BUSF 88,,,Female Outdoor
-58,Hammer,Ruth Allen,24.14m,BUSF 96,,,Female Outdoor
-59,Heptathlon,Louise White,3418,BUSF 96,,,Female Outdoor
-60,60m,Yvette Henry,7.69,BUSA 02,,,Female Indoor
-61,60mH,Rosie Marino,9.1,Steel Cup 11,,,Female Indoor
-62,200m,Yvette Henry,25.77,BUSA 02,,,Female Indoor
-63,400m,Hannah Wood,55.84,BUSA 03,,,Female Indoor
-64,800m,R Bowen,2.11.49,UAU 93,,,Female Indoor
-65,1500m,Sarah McCormack,4.45.1,Steel Cup 10,,,Female Indoor
-66,3000m,Sarah McCormack,10.03.94,BUCS 10,,,Female Indoor
-67,4 x 200m Relay,-,1.47.86,BUCS 09,,,Female Indoor
-68,4 x 400m Relay,-,4.59.3,Steel Cup 09,,,Female Indoor
-69,High Jump,Hannah Sargeant,1.70m,Steel Cup 11,,,Female Indoor
-70,High Jump,Elizabeth Smith,1.70m,UAU 93,,,Female Indoor
-71,Long Jump,Jazmin Sawyers,6.22m,BUCS 13,,,Female Indoor
-72,Triple Jump,Rebecca Cope,10.56m,Varsity 13,,,Female Indoor
-73,Pole Vault,Jennie Hughes,3.10m,BUCS 13,,,Female Indoor
-74,Shot Putt,Kristine Porsche,12.00m,BUCS 05,,,Female Indoor
+43,800yds (805 metres),J. Perry,2.14,BUSF 67,,,Female Outdoor
+44,800m,Rosie Keane,2.17.13,BUCS 13,,,Female Outdoor
+45,1500m,Penny Thackray,4.37.36,BUSF 94,,,Female Outdoor
+46,3000m,Penny Thackray,9.44.54,BUSF 94,,,Female Outdoor
+47,2000mSC,Jodie Fielder,8.23.32,BUSA 98,,,Female Outdoor
+48,5000m,Penny Thackray,16.26.22,BUSA 96,,,Female Outdoor
+49,10km,Penny Thackray,34.48.59,BUSA 98,,,Female Outdoor
+50,4 x 100m Relay,-,51.88,BUCS 12,,,Female Outdoor
+51,4 x 400m Relay,-,4.04.38,BUCS 12,,,Female Outdoor
+52,High Jump,Lauren Tyrrell,1.66m,BUCS 13,,,Female Outdoor
+53,Long Jump,Jazmin Sawyers,6.07m,BUCS 13,,,Female Outdoor
+54,Triple Jump,Emily Stewart,11.00m,BUSF 93,,,Female Outdoor
+55,Pole Vault,-,-,-,,,Female Outdoor
+56,Shot Put,Hilary Plummer,9.65m,BUSF 74,,,Female Outdoor
+57,Javelin,Angela King,49.18m,BUSF 73,,,Female Outdoor
+58,Discus,Rebecca Hardy,41.72m,BUSF 88,,,Female Outdoor
+59,Hammer,Ruth Allen,24.14m,BUSF 96,,,Female Outdoor
+60,Heptathlon,Louise White,3418,BUSF 96,,,Female Outdoor
+61,60m,Yvette Henry,7.69,BUSA 02,,,Female Indoor
+62,60mH,Rosie Marino,9.1,Steel Cup 11,,,Female Indoor
+63,200m,Yvette Henry,25.77,BUSA 02,,,Female Indoor
+64,400m,Hannah Wood,55.84,BUSA 03,,,Female Indoor
+65,800m,R Bowen,2.11.49,UAU 93,,,Female Indoor
+66,1500m,Sarah McCormack,4.45.1,Steel Cup 10,,,Female Indoor
+67,3000m,Sarah McCormack,10.03.94,BUCS 10,,,Female Indoor
+68,4 x 200m Relay,-,1.47.86,BUCS 09,,,Female Indoor
+69,4 x 400m Relay,-,4.59.3,Steel Cup 09,,,Female Indoor
+70,High Jump,Hannah Sargeant,1.70m,Steel Cup 11,,,Female Indoor
+71,High Jump,Elizabeth Smith,1.70m,UAU 93,,,Female Indoor
+72,Long Jump,Jazmin Sawyers,6.22m,BUCS 13,,,Female Indoor
+73,Triple Jump,Rebecca Cope,10.56m,Varsity 13,,,Female Indoor
+74,Pole Vault,Jennie Hughes,3.10m,BUCS 13,,,Female Indoor
+75,Shot Put,Kristine Porsche,12.00m,BUCS 05,,,Female Indoor
