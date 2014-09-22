@@ -16,7 +16,7 @@
       <td><%= social.name %></td>
       <td><%= social.date.to_formatted_s(:long) %></td>
       <% if social.facebook_event_link != "" %>
-      <td><%= link_to "Here", "http://"+social.facebook_event_link, class:"btn btn-warning edit-btn" %></td>
+      <td><%= link_to "Here", social.facebook_event_link, class:"btn btn-warning edit-btn", target: "_blank" %></td>
       <% else %>
       <td></td>
       <% end %>

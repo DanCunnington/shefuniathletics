@@ -2,13 +2,11 @@
 TO-DO
 --------------------------------------------
 
-- Training Split Times
-- Fill in membership page
 - Extend CMS to full site (e.g. committee page - look at amazon s3 to 	 allow admin to upload images)
 - SMTP settings in environment variables, have to edit it on heroku.
 - Renew Domain
-- Get Rachael, Simon and Ant to add in socials and fixtures
 - Add dynamic date to footer
+- Add some method of sorting records. If you add a new one it just goes straight to the bottom
 
 ---------------------------------------------
 DONE
@@ -22,10 +20,12 @@ DONE
 - Callums Bio
 - Validate rec run link
 - Look at removing facebook link to log in. Or implement split times
-- Fill
- in beginners run group page
+- Fill in beginners run group page
+- Fill in membership page
+- Get Rachael, Simon and Ant to add in socials and fixtures
 
 ---------------------------------------------
 BLOCKS
 ---------------------------------------------
-- Vinco Sport integration - Matt won't let us embed videos directly, but they are publically available on YouTube to embed anyway. Potenially showcase a few
+- Vinco Sport integration - Matt won't let us embed videos directly, but they are publically available on YouTube to  embed anyway. Potenially showcase a few
+- Training Split Times
