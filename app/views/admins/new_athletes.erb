@@ -2,6 +2,7 @@
 <%= render 'layouts/admin_dash' %>
 
 <% if @athletes != [] %> 
+<p>There are currently <%=@athletes.count%> that have signed up</p>
 <div class="panel panel-default table-responsive">
   <table class="table table-hover">  
     <thead>  
