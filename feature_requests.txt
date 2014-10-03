@@ -3,10 +3,19 @@ TO-DO
 --------------------------------------------
 
 - Extend CMS to full site (e.g. committee page - look at amazon s3 to 	 allow admin to upload images)
+	* Membership Page
+	* Committee
+	* Coaches
+	* Kit
+	* Club History
+	* Beginners Run Group
+	* Where is training
+	
 - SMTP settings in environment variables, have to edit it on heroku.
 - Renew Domain
 - Add dynamic date to footer
 - Add some method of sorting records. If you add a new one it just goes straight to the bottom
+- allow shef.ac.uk email addresses
 
 ---------------------------------------------
 DONE
