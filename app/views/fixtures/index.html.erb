@@ -17,7 +17,7 @@
       <td><%= fixture.date.to_formatted_s(:long) %></td>
       <td><%= fixture.location %></td>
       <% if fixture.result_link != "" %>
-        <td><%= link_to "Here", "http://"+fixture.result_link, class:"btn btn-warning edit-btn" %></td>
+        <td><%= link_to "Here", fixture.result_link, class:"btn btn-warning edit-btn" %></td>
       <% else %>
         <td></td>
       <% end %>
