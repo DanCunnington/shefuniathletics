@@ -213,7 +213,7 @@ a {
 }
 
 
-@media (max-width: 991px) {
+@media (max-width: 1062px) {
     .navbar-header {
         float: none;
     }
@@ -595,6 +595,11 @@ span.marathon {
 }
 
 img.sponsor {
-	width: 98px;
-	height: 17px;
+	width: 135px;
+	height: 26px;
+}
+
+a.nav-sponsor {
+	padding-bottom: 12px !important;
+	padding-top: 12px !important;
 }
