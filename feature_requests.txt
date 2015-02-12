@@ -2,7 +2,7 @@
 TO-DO
 --------------------------------------------
 
-- Extend CMS to full site (e.g. committee page - look at amazon s3 to 	 allow admin to upload images)
+- Extend CMS to full site (e.g. committee page - look at cloudinary to 	 allow admin to upload images)
 	* Membership Page
 	* Committee
 	* Coaches
