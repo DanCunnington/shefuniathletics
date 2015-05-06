@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
 	end
 
 	def membership
-		@text = InfoPage.find_by(key: "membership").value
+		@text = InfoPage.find_by(key: "membership").value 
 	end
 
 	def committee
