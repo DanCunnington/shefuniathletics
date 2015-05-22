@@ -11,11 +11,11 @@ TO-DO
 	* Beginners Run Group
 	* Where is training
 	
-- SMTP settings in environment variables, have to edit it on heroku.
+
 - Renew Domain
 - Add dynamic date to footer
 - Add some method of sorting records. If you add a new one it just goes straight to the bottom
-- allow shef.ac.uk email addresses
+- allow shef.ac.uk email addresses or just normal emails
 - weird error with new_athletes route on sigining up to the newsletter, have a look at old git commits on the routes
 - Think of a better solution for loading the current value of the wysiwyg in instead of using a delay
 - Create image upload link with amazon s3
@@ -37,6 +37,7 @@ DONE
 - Fill in beginners run group page
 - Fill in membership page
 - Get Rachael, Simon and Ant to add in socials and fixtures
+- SMTP settings in environment variables, have to edit it on heroku.
 
 ---------------------------------------------
 BLOCKS

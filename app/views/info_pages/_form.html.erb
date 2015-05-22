@@ -53,16 +53,24 @@ function populateHidden() {
 
 $(document).ready(function() {
 
-  setTimeout(function() {
+  var appendContentsInterval =  setInterval(function() {
 
-  //Get current value
-  var currentText = $("#hiddenContent").val();
+    //Get current value
+    var currentText = $("#hiddenContent").val();
+    if ($(".cke_wysiwyg_frame").contents().find("body").get(0)) {
+      if ($(".cke_wysiwyg_frame").contents().find("body").get(0).innerHTML == "") {
+        console.log("nop");
 
-  //Populate the wysiwyg editor with the current value from the hidden field
+        //Append wysiwig with current text
+        $(".cke_wysiwyg_frame").contents().find("body").get(0).innerHTML = currentText;
+      } else {
 
-  $(".cke_wysiwyg_frame").contents().find("body").get(0).innerHTML = currentText;
-
-  }, 3000);
+        //Appended, stop and clear interval
+        return clearInterval(appendContentsInterval);
+      }
+    }
+    
+  }, 500);
 });
 
 
