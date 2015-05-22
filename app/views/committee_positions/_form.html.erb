@@ -1,0 +1,55 @@
+<%= javascript_include_tag "/ckeditor.js" %>
+<div class="signup_cont spaced wysiwyg_cont">
+
+ <%= form_for(@committee_position) do |f| %>
+  <% if @committee_position.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@committee_position.errors.count, "error") %> prohibited this committee position from being saved:</h2>
+
+      <ul>
+      <% @committee_position.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="field">
+    <%= f.label :position, class: "control-label" %><br />
+    <%= f.text_field :position, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name, class: "control-label" %><br />
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image_url, class: "control-label" %><br />
+    <%= f.text_field :image_url, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :order, class: "control-label" %><br />
+    <%= f.number_field :order, class: "form-control" %>
+  </div>
+
+  <textarea class="ckeditor" cols="80" id="editor1" name="editor1" rows="10">
+        
+  </textarea>
+    
+
+  <%= f.hidden_field :description, id: "committePositionHiddenContent" %>
+
+  <div class="actions two-em-spaced">
+    <%= f.submit class: "btn btn-block btn-large btn-warning spaced", onclick:"populateHidden();" %>
+    <%= link_to 'Back', committee_positions_path, id: "new_fix", class: "btn btn-block btn-default spaced"  %>
+  </div>
+
+
+
+  <% end %>
+</div>
+

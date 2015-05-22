@@ -25,6 +25,8 @@ Shefuniathletics::Application.routes.draw do
     get 'admin', on: :collection
   end
 
+  resources :committee_positions
+
    resources :info_pages
 
    resources :admin_sessions, only: [:new, :create, :destroy]

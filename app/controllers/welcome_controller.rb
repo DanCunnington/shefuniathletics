@@ -10,6 +10,10 @@ class WelcomeController < ApplicationController
 
 	def committee
 
+		#Get all committee positions from database, and sort by order
+		@committee_positions = CommitteePosition.all.order(:order)
+		puts @committee_positions
+
 	end
 
 	def coaches

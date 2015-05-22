@@ -1,7 +1,47 @@
 <h1 class="heading">Meet the Committee</h1>
 
+<!-- For each committee position create a div for it-->
 
-<div class="row">
+<% if @committee_positions != [] %>
+	<div class="row">
+		<% @committee_positions.each do |committee_position| %>
+			<% modalID = committee_position.order.to_s+"-modal"%>
+			<% @elementID = committee_position.position%>
+			<div class="col-md-4 col-sm-6">
+				<div class ="committee-person" data-toggle="modal" data-target=<%="\#"+modalID%>>
+					<%= image_tag("#{committee_position.image_url}", id: "#{@elementID}", class: "committee-photos center-block", alt: "#{@elementID}") %>
+					<h4 class="montserrat committee-pos-title"><%=committee_position.position%> - <%= committee_position.name%></h4>
+				</div>
+			</div>
+
+			<div class="modal fade" id=<%=modalID%> tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="myModalLabel"><%=committee_position.position%> - <%= committee_position.name%></h4>
+						</div>
+						<div class="modal-body">
+							<%=raw committee_position.description%>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		<% end %>
+	</div>
+
+<% else %>
+
+<p>Content will appear shortly</p>
+
+<% end %>
+<!-- <div class="row">
 	<div class="col-md-4 col-sm-6">
 		<div class ="committee-person" data-toggle="modal" data-target="#captain-modal">
 
@@ -251,4 +291,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->

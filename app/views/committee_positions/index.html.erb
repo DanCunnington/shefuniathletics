@@ -1,0 +1,39 @@
+<h1 class="heading">Committee Positions</h1>
+
+<%= render 'layouts/admin_dash' %>
+
+
+<% if @committee_positions != [] %> 
+<div class="panel panel-default table-responsive">
+  <table class="table table-hover">  
+    <thead>  
+      <tr>    
+        <th>Position</th>
+        <th>Name</th>
+        <th>Image URL</th>
+        <th>Order</th>
+        <th>Description</th>
+      </tr>  
+    </thead>  
+    <tbody>  
+     <% @committee_positions.each do |committee_position| %>
+     <tr>
+      <td><%= committee_position.position %></td>
+      <td><%= committee_position.name %></td>
+      <td><%= committee_position.image_url %></td>
+      <td><%= committee_position.order %></td>
+      <td><%= committee_position.description %></td>
+       <td><%= link_to 'Edit', edit_committee_position_path(committee_position), class:"btn btn-info edit-btn", "data-no-turbolink" => true  %></td>
+      <td><%= link_to 'Delete', committee_position, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger edit-btn" %></td>   
+    </tr>
+    <% end %>
+  </tbody>
+</table>  
+</div>
+<% else %>
+<p>Page Content will appear shortly.</p>
+<% end %>
+
+<div class="signup_cont two-em-spaced">
+  <%= link_to "New Committee Position", new_committee_position_path, id: "new_committee_position", class: "btn btn-block btn-large btn-warning", "data-no-turbolink" => true %>
+</div>
