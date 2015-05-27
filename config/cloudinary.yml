@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: shefuniathletics
+  api_key: '133369295528228'
+  api_secret: k8vtMJFNc0tScOBHf8z6PAbVhVc
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: shefuniathletics
+  api_key: '133369295528228'
+  api_secret: k8vtMJFNc0tScOBHf8z6PAbVhVc
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: shefuniathletics
+  api_key: '133369295528228'
+  api_secret: k8vtMJFNc0tScOBHf8z6PAbVhVc
+  enhance_image_tag: true
+  static_image_support: false

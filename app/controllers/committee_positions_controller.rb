@@ -11,6 +11,13 @@ class CommitteePositionsController < ApplicationController
  
   # GET /committee_positions/new
   def new
+
+    if params[:image_url].present?
+      preloaded = Cloudinary::PreloadedFile.new(params[:image_url])         
+      raise "Invalid upload signature" if !preloaded.valid?
+      @committee_position.image_url = preloaded.identifier
+    end
+
     @committee_position= CommitteePosition.new
   end
 
@@ -22,6 +29,10 @@ class CommitteePositionsController < ApplicationController
   # POST /committee_positions.json
   def create
     @committee_position = CommitteePosition.new(committee_position_params)
+
+    fullImage = @committee_position.image_url.split('/')
+
+    @committee_position.image_url = fullImage[fullImage.length-1]
 
     respond_to do |format|
       if @committee_position.save

@@ -57,3 +57,4 @@ end
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'bcrypt'
 gem 'zebra-datepicker-rails'
+gem 'cloudinary'

@@ -16,11 +16,12 @@
       </tr>  
     </thead>  
     <tbody>  
+    <% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_180,h_243,c_thumb,g_face/'%>
      <% @committee_positions.each do |committee_position| %>
      <tr>
       <td><%= committee_position.position %></td>
       <td><%= committee_position.name %></td>
-      <td><%= committee_position.image_url %></td>
+      <td><%= image_tag(baseCloudinaryURL+committee_position.image_url, id: "#{@elementID}", class: "committee-photos center-block", alt: "#{@elementID}", :width => 45, :height => 61, :crop => :thumb, :gravity => :face )%></td>
       <td><%= committee_position.order %></td>
       <td><%= committee_position.description %></td>
        <td><%= link_to 'Edit', edit_committee_position_path(committee_position), class:"btn btn-info edit-btn", "data-no-turbolink" => true  %></td>
