@@ -3,17 +3,21 @@ TO-DO
 --------------------------------------------
 
 - Extend CMS to full site
-	* Membership Page
+	#DONE Membership Page
 	* Coaches
 	* Kit
 	* Club History
-	* Beginners Run Group
+	#DONE Beginners Run Group
 	* Where is training
+	* Background Image
+	* Sponsors
+	* Youtube Video
+	* All pictures
+	- Tidy all of this up
 	
 
 - Renew Domain
 - Add dynamic date to footer
-- Add some method of sorting records. If you add a new one it just goes straight to the bottom
 - allow shef.ac.uk email addresses or just normal emails
 - weird error with new_athletes route on sigining up to the newsletter, have a look at old git commits on the routes
 - Make any paragraph styles on content inline so they can be picked up by the wysiwyg
@@ -37,6 +41,7 @@ DONE
 - SMTP settings in environment variables, have to edit it on heroku.
 - (e.g. committee page - look at cloudinary to 	 allow admin to upload images)
 - Think of a better solution for loading the current value of the wysiwyg in instead of using a delay
+- Add some method of sorting records. If you add a new one it just goes straight to the bottom
 ---------------------------------------------
 BLOCKS
 ---------------------------------------------

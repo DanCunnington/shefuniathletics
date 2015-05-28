@@ -2,6 +2,9 @@
 
 <%= render 'layouts/admin_dash' %>
 
+<div class="signup_cont two-em-spaced">
+  <%= link_to "New Committee Position", new_committee_position_path, id: "new_committee_position", class: "btn btn-block btn-large btn-warning", "data-no-turbolink" => true %><br>
+</div>
 
 <% if @committee_positions != [] %> 
 <div class="panel panel-default table-responsive">
