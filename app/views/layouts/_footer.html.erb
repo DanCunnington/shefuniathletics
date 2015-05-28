@@ -1,1 +1,9 @@
-<p class="foot">&copy University of Sheffield Athletics and Cross Country Club 2014</p>
+<%
+
+require 'date'
+
+currentYear = Date.today.strftime("%Y")
+
+%>
+
+<p class="foot">&copy University of Sheffield Athletics and Cross Country Club <%=currentYear%></p>

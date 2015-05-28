@@ -40,40 +40,5 @@
   <% end %>
 </div>
 
-<script>
-function populateHidden() {
-
-  //Get contents of wysiwg
-  var textAsHTML = $(".cke_wysiwyg_frame").contents().find("body").get(0).innerHTML;
-
-  //Place in hidden field
-  $("#hiddenContent").val(textAsHTML);
-}
-
-
-$(document).ready(function() {
-
-  var appendContentsInterval =  setInterval(function() {
-
-    //Get current value
-    var currentText = $("#hiddenContent").val();
-    if ($(".cke_wysiwyg_frame").contents().find("body").get(0)) {
-      if ($(".cke_wysiwyg_frame").contents().find("body").get(0).innerHTML == "") {
-        console.log("nop");
-
-        //Append wysiwig with current text
-        $(".cke_wysiwyg_frame").contents().find("body").get(0).innerHTML = currentText;
-      } else {
-
-        //Appended, stop and clear interval
-        return clearInterval(appendContentsInterval);
-      }
-    }
-    
-  }, 500);
-});
-
-
-</script>
 
 

@@ -17,7 +17,7 @@ TO-DO
 	
 
 - Renew Domain
-- Add dynamic date to footer
+- Sammys stuff - old pictures
 - allow shef.ac.uk email addresses or just normal emails
 - weird error with new_athletes route on sigining up to the newsletter, have a look at old git commits on the routes
 - Make any paragraph styles on content inline so they can be picked up by the wysiwyg
@@ -42,6 +42,7 @@ DONE
 - (e.g. committee page - look at cloudinary to 	 allow admin to upload images)
 - Think of a better solution for loading the current value of the wysiwyg in instead of using a delay
 - Add some method of sorting records. If you add a new one it just goes straight to the bottom
+- Add dynamic date to footer
 ---------------------------------------------
 BLOCKS
 ---------------------------------------------
