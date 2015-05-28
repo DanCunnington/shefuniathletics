@@ -661,3 +661,18 @@ a.nav-sponsor {
   padding: 0;
   border: none;
 }
+
+.sortable-placeholder {
+  border: 1px dashed #CCC;
+  background-color: #f9f9f9;
+  height: 80px;
+  margin-bottom: 10px;
+}
+ 
+.sortable {
+ /* display: list-item;*/
+}
+
+i.fa-bars {
+	cursor: pointer;
+}

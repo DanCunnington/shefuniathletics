@@ -6,7 +6,7 @@
 	<div class="row">
 		<% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_180,h_243,c_thumb,g_face/'%>
 		<% @committee_positions.each do |committee_position| %>
-			<% modalID = committee_position.order.to_s+"-modal"%>
+			<% modalID = committee_position.priority.to_s+"-modal"%>
 			<% @elementID = committee_position.position%>
 			<div class="col-md-4 col-sm-6">
 				<div class ="committee-person" data-toggle="modal" data-target=<%="\#"+modalID%>>

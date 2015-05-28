@@ -26,7 +26,9 @@ Shefuniathletics::Application.routes.draw do
     put 'sort', on: :collection
   end
 
-  resources :committee_positions
+   resources :committee_positions do
+     put 'sort', on: :collection
+   end
 
    resources :info_pages
 

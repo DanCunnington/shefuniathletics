@@ -72,6 +72,16 @@ class CommitteePositionsController < ApplicationController
     end
   end
 
+  def sort
+    puts "********************************************************"
+    puts params[:order]
+    puts "********************************************************"
+    params[:order].each do |key,value|
+      CommitteePosition.find(value[:id]).update_attribute(:priority,value[:position])
+    end
+    render :nothing => true
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -81,7 +91,7 @@ class CommitteePositionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def committee_position_params
-      params.require(:committee_position).permit(:position, :name, :image_url, :order, :description)
+      params.require(:committee_position).permit(:position, :name, :image_url, :description)
     end
 
     def check_admin

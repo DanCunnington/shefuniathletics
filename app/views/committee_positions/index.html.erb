@@ -7,22 +7,22 @@
 <div class="panel panel-default table-responsive">
   <table class="table table-hover">  
     <thead>  
-      <tr>    
+      <tr>
+        <th></th> 
         <th>Position</th>
         <th>Name</th>
         <th>Image URL</th>
-        <th>Order</th>
         <th>Description</th>
       </tr>  
     </thead>  
-    <tbody>  
+    <tbody class="committee_positions-sortable">  
     <% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_180,h_243,c_thumb,g_face/'%>
      <% @committee_positions.each do |committee_position| %>
-     <tr>
+     <tr class="committee_position" data-id="<%= committee_position.id %>">
+      <td><i class="fa fa-bars"></i></td>
       <td><%= committee_position.position %></td>
       <td><%= committee_position.name %></td>
       <td><%= image_tag(baseCloudinaryURL+committee_position.image_url, id: "#{@elementID}", class: "committee-photos center-block", alt: "#{@elementID}", :width => 45, :height => 61, :crop => :thumb, :gravity => :face )%></td>
-      <td><%= committee_position.order %></td>
       <td><%= committee_position.description %></td>
        <td><%= link_to 'Edit', edit_committee_position_path(committee_position), class:"btn btn-info edit-btn", "data-no-turbolink" => true  %></td>
       <td><%= link_to 'Delete', committee_position, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger edit-btn" %></td>   
