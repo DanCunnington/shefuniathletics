@@ -1,14 +1,15 @@
 class RecordsController < ApplicationController
   before_action :set_record, only: [:edit, :update, :destroy]
   before_action :check_admin, except: [:index]
+  
 
   # GET /records
   # GET /records.json
   def index
-    @male_outdoors = Record.where(event_type: "Male Outdoor").order(created_at: :asc)
-    @male_indoors = Record.where(event_type: "Male Indoor").order(created_at: :asc)
-    @female_outdoors = Record.where(event_type: "Female Outdoor").order(created_at: :asc)
-    @female_indoors = Record.where(event_type: "Female Indoor").order(created_at: :asc)
+    @male_outdoors = Record.where(event_type: "Male Outdoor")
+    @male_indoors = Record.where(event_type: "Male Indoor")
+    @female_outdoors = Record.where(event_type: "Female Outdoor")
+    @female_indoors = Record.where(event_type: "Female Indoor")
   end
 
  
@@ -70,6 +71,13 @@ class RecordsController < ApplicationController
     @male_indoors = Record.where(event_type: "Male Indoor")
     @female_outdoors = Record.where(event_type: "Female Outdoor")
     @female_indoors = Record.where(event_type: "Female Indoor")
+  end
+
+  def sort
+    params[:order].each do |key,value|
+      Record.find(value[:id]).update_attribute(:priority,value[:position])
+    end
+    render :nothing => true
   end
 
   private

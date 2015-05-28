@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require cloudinary
+//= require html.sortable
 //= require bootstrap.min
 //= require turbolinks
 //= require_tree

@@ -23,6 +23,7 @@ Shefuniathletics::Application.routes.draw do
 
    resources :records do
     get 'admin', on: :collection
+    put 'sort', on: :collection
   end
 
   resources :committee_positions

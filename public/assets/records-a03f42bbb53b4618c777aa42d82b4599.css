@@ -1,0 +1,17 @@
+/* line 1, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/records.css.scss */
+.sortable-placeholder {
+  border: 1px dashed #CCC;
+  background-color: #f9f9f9;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+/* line 8, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/records.css.scss */
+.sortable {
+  /* display: list-item;*/
+}
+
+/* line 12, C:/Users/Dan/Documents/Athletics/www/shefuniathletics/app/assets/stylesheets/records.css.scss */
+i.fa-bars {
+  cursor: pointer;
+}
