@@ -17,7 +17,7 @@ class WelcomeController < ApplicationController
 	end
 
 	def kit
-
+		@kit_items = KitItem.all
 	end
 
 	def history

@@ -64,5 +64,11 @@ committee_positions
 position: string
 name: string
 image_url: string
-order: int
+priority: int
 description: text
+
+kit_items
+-----------------
+name: string
+image_url: string
+priority: integer

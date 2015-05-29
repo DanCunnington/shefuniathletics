@@ -6,7 +6,27 @@
 
 <br class="spaced">
 
+<% if @kit_items != [] %>
 <div class="row">
+	<% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_180,h_243,c_thumb/'%>
+	<!--For each kit item, display it-->
+	<% @kit_items.each do |kit_item| %>
+
+		<div class="col-md-4 col-sm-6 kit-img">
+			<%= link_to image_tag(baseCloudinaryURL+kit_item.image_url, class: "center-block", alt: "Kit"), kit_item.url, :target => "_blank" %>
+			<h4 class="montserrat"><%=kit_item.name%></h4>
+		</div>
+
+
+	<% end %>
+
+</div>
+<% else %>
+
+	<p>Page content will appear shortly</p>
+<% end %>
+
+<!-- <div class="row">
 
 	<div class="col-md-4 col-sm-6 kit-img">
 		<%= link_to image_tag("kit-1.png", class: "center-block", alt: "Kit"), "http://www.sport-sheffield-onlinestore.com/index.php?page=shop.product_details&flypage=flypage.tpl&product_id=10637&category_id=1069&Itemid=1206&option=com_virtuemart&Itemid=1193&Itemid=1206", :target => "_blank" %>
@@ -42,5 +62,5 @@
 		<%= link_to image_tag("kit-6.png", class: "center-block", alt: "Kit"), "http://www.sport-sheffield-onlinestore.com/index.php?page=shop.product_details&flypage=flypage.tpl&product_id=10647&category_id=1069&Itemid=1193&option=com_virtuemart&Itemid=1193&Itemid=1193", :target => "_blank" %>
 		<h4 class="montserrat">Nike Mens Filament Tights</h4>
 	</div>
-</div>
+</div> -->
 
