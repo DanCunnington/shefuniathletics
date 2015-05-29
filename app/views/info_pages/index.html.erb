@@ -3,6 +3,11 @@
 
 <%= render 'layouts/admin_dash' %>
 
+<% if current_admin_user.super_admin %>
+<div class="signup_cont two-em-spaced">
+  <%= link_to "New Info Page", new_info_page_path, id: "new_info_page", class: "btn btn-block btn-large btn-warning", "data-no-turbolink" => true %><br>
+</div>
+<% end %>
 
 <% if @info_pages != [] %> 
 <div class="panel panel-default table-responsive">
@@ -19,9 +24,11 @@
      <% @info_pages.each do |info_page| %>
      <tr>
       <td><%= info_page.key %></td>
-      <td><%= info_page.value %></td>
+      <td><%= info_page.value[0..100] %></td>
        <td><%= link_to 'Edit', edit_info_page_path(info_page), class:"btn btn-info edit-btn", "data-no-turbolink" => true  %></td>
-      <td><%= link_to 'Delete', info_page, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger edit-btn" %></td>   
+       <% if current_admin_user.super_admin %>
+      <td><%= link_to 'Delete', info_page, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger edit-btn" %></td> 
+      <% end %> 
     </tr>
     <% end %>
   </tbody>
@@ -29,4 +36,10 @@
 </div>
 <% else %>
 <p>Page Content will appear shortly.</p>
+<% end %>
+
+<% if current_admin_user.super_admin %>
+<div class="signup_cont two-em-spaced">
+  <%= link_to "New Info Page", new_info_page_path, id: "new_info_page", class: "btn btn-block btn-large btn-warning", "data-no-turbolink" => true %><br>
+</div>
 <% end %>

@@ -418,9 +418,18 @@ td a:hover {
 
 }
 
+.kit-para a {
+	color: gold !important;
+	background-color: transparent;
+	text-align: center;
+}
+
+.kit-para p {
+	text-align: center;
+}
 
 
-#new_fix, #new_soc, #new_committee_position, #new_kit_item {
+#new_fix, #new_soc, #new_committee_position, #new_kit_item, #new_info_page {
 	color: white;
 }
 
@@ -565,7 +574,7 @@ p.center {
 	};
 }
 
-p.kit-para {
+.kit-para {
 	max-width: 520px;
 	margin: 0 auto;
 }

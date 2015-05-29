@@ -1,6 +1,7 @@
 class InfoPagesController < ApplicationController
   before_action :set_info_page, only: [:edit, :update, :destroy]
   before_action :check_admin
+  before_action :check_super_admin, only: [:new, :create, :destroy]
 
   # GET /info_pages
   # GET /info_pages.json
@@ -10,6 +11,12 @@ class InfoPagesController < ApplicationController
 
    # GET /info_pages/1/edit
   def edit
+    @editPage = true
+  end
+
+  def new
+    @info_page= InfoPage.new
+    @editPage = false
   end
 
   # POST /info_pages
@@ -70,5 +77,9 @@ class InfoPagesController < ApplicationController
     def check_admin
       redirect_to(root_url) unless current_admin_user
     end 
+
+    def check_super_admin
+      redirect_to(root_url) unless current_admin_user.super_admin
+    end
     
 end

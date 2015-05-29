@@ -18,6 +18,7 @@ class WelcomeController < ApplicationController
 
 	def kit
 		@kit_items = KitItem.all
+		@text = InfoPage.find_by(key:"kit_page").value
 	end
 
 	def history

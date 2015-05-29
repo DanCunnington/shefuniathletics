@@ -18,7 +18,11 @@
 
   <div class="field">
     <%= f.label :key, class: "control-label" %><br />
-    <%= f.text_field :key, class: "form-control", :disabled=>true%>
+    <% if @editPage %>
+      <%= f.text_field :key, class: "form-control", :disabled=>true%>
+    <% else %>
+      <%= f.text_field :key, class: "form-control"%>
+    <% end %>
   </div>
 
  
