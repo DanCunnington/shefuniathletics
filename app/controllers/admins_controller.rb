@@ -26,7 +26,7 @@ include AdminSessionsHelper
 			flash[:success] = "Admin was successfully created"
 			redirect_to current_admin_user
 		else
-			flash[:error] = "Could not add account"
+			flash[:danger] = "Could not add account"
 			redirect_to current_admin_user
 		end
 	end
