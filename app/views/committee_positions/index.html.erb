@@ -14,7 +14,8 @@
         <th></th> 
         <th>Position</th>
         <th>Name</th>
-        <th>Image URL</th>
+        <th>Image</th>
+        <th>URL</th>
         <th>Description</th>
       </tr>  
     </thead>  
@@ -26,6 +27,7 @@
       <td><%= committee_position.position %></td>
       <td><%= committee_position.name %></td>
       <td><%= image_tag(baseCloudinaryURL+committee_position.image_url, id: "#{@elementID}", class: "committee-photos center-block", alt: "#{@elementID}", :width => 45, :height => 61, :crop => :thumb, :gravity => :face )%></td>
+      <td><%= committee_position.image_url %></td>
       <td><%= committee_position.description %></td>
        <td><%= link_to 'Edit', edit_committee_position_path(committee_position), class:"btn btn-info edit-btn", "data-no-turbolink" => true  %></td>
       <td><%= link_to 'Delete', committee_position, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger edit-btn" %></td>   
