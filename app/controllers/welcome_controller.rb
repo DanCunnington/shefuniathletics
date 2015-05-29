@@ -18,7 +18,13 @@ class WelcomeController < ApplicationController
 
 	def kit
 		@kit_items = KitItem.all
-		@text = InfoPage.find_by(key:"kit_page").value
+		info_page_record = InfoPage.where(key:"kit_page")
+		if info_page_record.exists?(@text = info_page_record.value)
+
+		else
+			@text = ""
+		end
+		
 	end
 
 	def history

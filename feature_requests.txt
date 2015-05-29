@@ -5,7 +5,7 @@ TO-DO
 - Extend CMS to full site
 	#DONE Membership Page
 	* Coaches
-	* Kit
+	#DONE Kit
 	* Club History
 	#DONE Beginners Run Group
 	* Where is training
