@@ -20,7 +20,7 @@ class WelcomeController < ApplicationController
 		@kit_items = KitItem.all
 		info_page_record = InfoPage.where(key:"kit_page")
 		if info_page_record != []
-			@text = info_page_record.value
+			@text = InfoPage.find_by(key: "kit_page").value
 
 		else
 			@text = ""
