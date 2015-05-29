@@ -19,7 +19,8 @@ class WelcomeController < ApplicationController
 	def kit
 		@kit_items = KitItem.all
 		info_page_record = InfoPage.where(key:"kit_page")
-		if info_page_record.exists?(@text = info_page_record.value)
+		if info_page_record != []
+			@text = info_page_record.value
 
 		else
 			@text = ""
