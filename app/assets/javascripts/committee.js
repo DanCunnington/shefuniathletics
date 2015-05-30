@@ -61,6 +61,7 @@ var ready = function() {
         format: data.result.format, width: 50, height: 50, crop: "fit"
       }).appendTo(preview);
 
+
       $('<a/>').
         addClass('delete_by_token').
         attr({href: '#'}).

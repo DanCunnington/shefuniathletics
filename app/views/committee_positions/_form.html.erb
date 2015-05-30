@@ -27,20 +27,22 @@
   </div>
 
   <div class="field">
-    <%= f.label :image_url, class: "control-label" %><br />
+    <%= f.label :image_url, "Image", class: "control-label"%><br />
 
     <div class="form_controls">
+
       <div class="upload_button_holder">
         <%= link_to("Upload", "#", :class => "upload_button") %>
         <%= f.cl_image_upload(:image_url, :return_delete_token=>true) %>
       </div>
+      <a href="#" rel="committee_position_image_url" class="chooseImage btn btn-info spaced">Choose Image</a>
       <span class="status"></span>
     </div>
 
     <div class="form_controls">
-      <div class="preview">
+      <div class="committee_position_image_url_preview">
       <% if @committee_position.image_url %>
-        <% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_180,h_243,c_thumb,g_face/'%>
+        <% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_45,h_61,c_thumb,g_face/'%>
         <%= image_tag(baseCloudinaryURL+@committee_position.image_url, :width => 45, :height => 61, :crop => :thumb, :gravity => :face )%>
         <% end %>
       </div>

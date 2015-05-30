@@ -1,4 +1,32 @@
 var ready = function() {
+
+  var appendCommitteeContentsInterval =  setInterval(function() {
+
+    //Get current value
+    var currentText = $("#committePositionHiddenContent").val();
+
+    if (currentText) {
+      if ($(".cke_wysiwyg_frame").contents().find("body").get(0)) {
+        var contentsOfFrame = $(".cke_wysiwyg_frame").contents().find("body").get(0).innerHTML;
+        if ((contentsOfFrame == "undefined") || (contentsOfFrame == ""))  {
+
+          //Append wysiwig with current text
+          $(".cke_wysiwyg_frame").contents().find("body").get(0).innerHTML = currentText;
+        } else {
+
+          //Appended, stop and clear interval
+          return clearInterval(appendCommitteeContentsInterval);
+        }
+      }
+    } else {
+      return clearInterval(appendCommitteeContentsInterval);
+    }
+    
+    
+  }, 500);
+
+
+
   // Cloudinary jQuery integration library uses jQuery File Upload widget
   // (see http://blueimp.github.io/jQuery-File-Upload/).
   // Any file input field with cloudinary-fileupload class is automatically
@@ -16,7 +44,6 @@ var ready = function() {
       //maxFileSize: 20000000, // 20MB
       dropZone: "#direct_upload",
       start: function (e) {
-        console.log("helloooooo");
         $(".status").text("Starting upload...");
       },
       progress: function (e, data) {
@@ -33,6 +60,7 @@ var ready = function() {
       $.cloudinary.image(data.result.public_id, {
         format: data.result.format, width: 50, height: 50, crop: "fit"
       }).appendTo(preview);
+
 
       $('<a/>').
         addClass('delete_by_token').
@@ -75,34 +103,45 @@ var ready = function() {
   var set_positions = function(){
     // loop through and give each task a data-pos
     // attribute that holds its position in the DOM
-    $('tr.kit_item').each(function(i){
+    $('tr.committee_position').each(function(i){
         $(this).attr("data-pos",i+1);
     });
   }
   // call sortable on our div with the sortable class
-  $('.kit_items-sortable').sortable();
+  $('.committee_positions-sortable').sortable();
 
   // after the order changes
-  $('.kit_items-sortable').sortable().bind('sortupdate', function(e, ui) {
+  $('.committee_positions-sortable').sortable().bind('sortupdate', function(e, ui) {
       // array to store new order
       updated_order = []
       // set the updated positions
       set_positions();
 
       // populate the updated_order array with the new task positions
-      $('tr.kit_item').each(function(i){
+      $('tr.committee_position').each(function(i){
           updated_order.push({ id: $(this).data("id"), position: i+1 });
       });
 
       // send the updated order via ajax
       $.ajax({
           type: "PUT",
-          url: '/kit_items/sort',
+          url: '/committee_positions/sort',
           data: { order: updated_order }
       });
   });
+
+
+
 }
 
+function populateCommitteeHidden() {
+
+  //Get contents of wysiwg
+  var textAsHTML = $(".cke_wysiwyg_frame").contents().find("body").get(0).innerHTML;
+
+  //Place in hidden field
+  $("#committePositionHiddenContent").val(textAsHTML);
+}
 
 $(document).ready(ready);
 /**

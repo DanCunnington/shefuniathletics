@@ -2,7 +2,7 @@
 TO-DO
 --------------------------------------------
 
-- Wysiwig doesn't work on firefox
+- Wysiwig doesn't work on firefox - works on i.e.
 
 
 - Extend CMS to full site
@@ -11,7 +11,7 @@ TO-DO
 	#DONE Kit
 	* Club History
 	#DONE Beginners Run Group
-	* Where is training
+	#DONE Where is training
 	* Background Image
 	* Sponsors
 	* Youtube Video

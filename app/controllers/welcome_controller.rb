@@ -41,5 +41,11 @@ class WelcomeController < ApplicationController
 
 	end
 
+	def getImagesFromCloudinary
+		currentImages = Cloudinary::Api.resources(:max_results => 500)
+
+		render :json => currentImages
+	end
+
 
 end

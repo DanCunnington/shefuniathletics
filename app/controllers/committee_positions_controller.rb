@@ -30,9 +30,11 @@ class CommitteePositionsController < ApplicationController
   def create
     @committee_position = CommitteePosition.new(committee_position_params)
 
-    fullImage = @committee_position.image_url.split('/')
+    if @committee_position.image_url.include? "/"
+      fullImage = @committee_position.image_url.split('/')
 
-    @committee_position.image_url = fullImage[fullImage.length-1]
+      @committee_position.image_url = fullImage[fullImage.length-1]
+    end
 
     respond_to do |format|
       if @committee_position.save

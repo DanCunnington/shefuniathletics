@@ -266,6 +266,17 @@ a {
 	}
 }
 
+img.cloudinaryImage {
+	border: solid 2px white;
+	border-radius: 1px;
+	margin-bottom: 20px;
+
+	&:hover {
+		cursor: pointer;
+		border-color: gold;
+	}
+}
+
 /* COMMITTEE */
 
 img.committee-photos {
@@ -431,6 +442,15 @@ td a:hover {
 
 #new_fix, #new_soc, #new_committee_position, #new_kit_item, #new_info_page, #new_coach {
 	color: white;
+}
+
+a.chooseImage {
+	display: block;
+	width: 150px;
+	color: white;
+	&:hover {
+		color: white !important;
+	}
 }
 
 .rec-run-button {
@@ -639,8 +659,6 @@ a.nav-sponsor {
 .upload_button_holder .upload_button {
   display: block;
   position: relative;
-  font-weight: bold;
-  font-size: 14px;
   background-color: rgb(15, 97, 172);
   color: #fff;
   padding: 5px 0;
