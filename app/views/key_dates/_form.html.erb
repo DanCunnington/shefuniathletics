@@ -1,0 +1,36 @@
+  <%= javascript_include_tag "/ckeditor.js" %>
+<div class="signup_cont spaced wysiwyg_cont">
+
+ <%= form_for(@key_date) do |f| %>
+  <% if @key_date.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@key_date.errors.count, "error") %> prohibited this key date from being saved:</h2>
+
+      <ul>
+      <% @key_date.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+      
+  <textarea class="ckeditor" cols="80" id="editor1" name="editor1" rows="10">
+        
+  </textarea>
+    
+
+  <%= f.hidden_field :description, id: "hiddenKeyDateContent" %>
+
+  <div class="actions two-em-spaced">
+    <%= f.submit class: "btn btn-block btn-large btn-warning spaced", onclick:"populateKeyDateHidden();" %>
+    <%= link_to 'Back', key_dates_path, id: "new_fix", class: "btn btn-block btn-default spaced"  %>
+  </div>
+
+
+
+  <% end %>
+</div>
+
+
+

@@ -40,6 +40,14 @@ Shefuniathletics::Application.routes.draw do
      put 'sort', on: :collection
    end
 
+   resources :key_dates do
+      put 'sort', on: :collection
+   end
+
+   resources :historic_images do
+      put 'sort', on: :collection
+   end
+
    resources :info_pages
 
    resources :admin_sessions, only: [:new, :create, :destroy]

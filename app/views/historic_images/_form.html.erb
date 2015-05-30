@@ -1,0 +1,56 @@
+<%= javascript_include_tag "/ckeditor.js" %>
+<div class="signup_cont spaced wysiwyg_cont">
+
+ <%= form_for(@historic_image) do |f| %>
+  <% if @historic_image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@historic_image.errors.count, "error") %> prohibited this historic image from being saved:</h2>
+
+      <ul>
+      <% @historic_image.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :image_url, "Image", class: "control-label"%><br />
+
+    <div class="form_controls">
+
+      <div class="upload_button_holder">
+        <%= link_to("Upload", "#", :class => "upload_button") %>
+        <%= f.cl_image_upload(:image_url, :return_delete_token=>true) %>
+      </div>
+      <a href="#" rel="historic_image_image_url" class="chooseImage btn btn-info spaced">Choose Image</a>
+      <span class="status"></span>
+    </div>
+
+    <div class="form_controls">
+      <div class="custom-chosen-preview"></div>
+      <div class="preview">
+      <% if @historic_image.image_url %>
+        <% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_45,h_61,c_fill/'%>
+        <%= image_tag(baseCloudinaryURL+@historic_image.image_url, :width => 45, :height => 61, :crop => :fill)%>
+        <% end %>
+      </div>
+    </div>
+
+    <%= f.hidden_field :image_url %>
+    <%= hidden_field_tag :direct, params[:direct] %>
+  </div>
+
+
+  <div class="actions two-em-spaced">
+    <%= f.submit class: "btn btn-block btn-large btn-warning spaced" %>
+    <%= link_to 'Back', historic_images_path, id: "new_fix", class: "btn btn-block btn-default spaced"  %>
+  </div>
+
+
+
+  <% end %>
+</div>
+
+

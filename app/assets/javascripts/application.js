@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require cloudinary
 //= require html.sortable
+//= require owl.carousel
 //= require bootstrap.min
 //= require turbolinks
 //= require_tree

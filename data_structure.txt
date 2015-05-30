@@ -79,3 +79,13 @@ name: string
 image_url: string
 description: string
 priority: integer
+
+key_dates
+-----------------
+description: string
+priority: integer
+
+historic_images
+-----------------
+image_url: string
+priority: integer

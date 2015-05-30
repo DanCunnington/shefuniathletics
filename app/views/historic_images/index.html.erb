@@ -1,0 +1,39 @@
+<h1 class="heading">Historic Images</h1>
+
+<%= render 'layouts/admin_dash' %>
+
+<div class="signup_cont two-em-spaced">
+  <%= link_to "New Historic Image", new_historic_image_path, id: "new_historic_image", class: "btn btn-block btn-large btn-warning", "data-no-turbolink" => true %><br>
+</div>
+
+<% if @historic_images != [] %> 
+<div class="panel panel-default table-responsive">
+  <table class="table table-hover">  
+    <thead>  
+      <tr>
+        <th></th> 
+        <th>Image</th>
+        <th></th>
+        <th></th>
+      </tr>  
+    </thead>  
+    <tbody class="historic_images-sortable">  
+    <% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_150,h_150,c_fill/'%>
+     <% @historic_images.each do |historic_image| %>
+     <tr class="historic_image" data-id="<%= historic_image.id %>">
+      <td><i class="fa fa-bars"></i></td>
+      <td><%= image_tag(baseCloudinaryURL+historic_image.image_url, class: "center-block", :width => 150, :height => 150, :crop => :fill )%></td>
+       <td><%= link_to 'Edit', edit_historic_image_path(historic_image), class:"btn btn-info edit-btn", "data-no-turbolink" => true  %></td>
+      <td><%= link_to 'Delete', historic_image, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger edit-btn" %></td>   
+    </tr>
+    <% end %>
+  </tbody>
+</table>  
+</div>
+<% else %>
+<p>Page Content will appear shortly.</p>
+<% end %>
+
+<div class="signup_cont two-em-spaced">
+  <%= link_to "New Historic Image", new_historic_image_path, id: "new_historic_image", class: "btn btn-block btn-large btn-warning", "data-no-turbolink" => true %><br>
+</div>

@@ -266,6 +266,18 @@ a {
 	}
 }
 
+
+img.historic-photo {
+	max-width: 400px;
+}
+
+@media (max-width: 430px) {
+	img.historic-photo {
+		max-width: 300px;
+	}
+}
+
+
 img.cloudinaryImage {
 	border: solid 2px white;
 	border-radius: 1px;
@@ -325,8 +337,14 @@ img.committee-photos {
 }
 
 
-h4.montserrat, p {
+h4.montserrat {
 	font-family: 'Montserrat', sans-serif;
+}
+
+p {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 11pt;
 }
 
 h4.committee-pos-title {
@@ -459,7 +477,7 @@ td a:hover {
 }
 
 
-#new_fix, #new_soc, #new_committee_position, #new_kit_item, #new_info_page, #new_coach {
+#new_fix, #new_soc, #new_committee_position, #new_kit_item, #new_info_page, #new_coach, #new_key_date, #new_historic_image {
 	color: white;
 }
 
@@ -568,7 +586,7 @@ img.coach-photos {
 }
 
 p {
-	line-height: 1.7;
+	line-height: 2;
 
 }
 
@@ -631,7 +649,9 @@ img.parkrun, img.membership, img.old {
 }
 
 img.old {
-	height: 400px;
+	max-width: 80%;
+	margin-top: 80px;
+	border: none;
 }
 
 span.gold {
@@ -745,4 +765,46 @@ a.cloudinaryImageClose {
 a.clear-chosen-preview, a.delete_by_token {
 	color: white;
 	font-size: 120%;
+}
+
+.history-para {
+	background-color: rgba(0,0,0,0.7);
+	padding: 30px;
+	border-radius: 10px;
+	font-weight: lighter;
+	font-size: 12pt;
+}
+
+h4.keyDates {
+	clear: both;
+	text-align: center;
+}
+
+h4.keyDates, h4.backgroundHist {
+	font-size: 18pt;	
+}
+
+.historyIntro {
+	border-bottom: solid 1px whitesmoke;
+	padding-bottom: 30px;
+}
+
+.dates-div {
+	margin-top: 30px;
+
+	margin-bottom: 60px;
+}
+
+h4.backgroundHist {
+	text-align: center;
+}
+
+.historic-photo {
+	display: block;
+	margin: 0 auto;
+
+}
+
+h4.keyDates {
+	clear: both;
 }

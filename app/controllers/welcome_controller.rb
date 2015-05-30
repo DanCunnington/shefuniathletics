@@ -29,7 +29,13 @@ class WelcomeController < ApplicationController
 	end
 
 	def history
+		@background = InfoPage.find_by(key: "history_background").value
 
+		@historic_images = HistoricImage.all
+
+		keyDates = KeyDate.all
+
+		@key_dates_1,@key_dates_2 = keyDates.each_slice( (keyDates.size/2.0).round ).to_a
 	end
 
 	def records

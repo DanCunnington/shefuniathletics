@@ -9,7 +9,7 @@ TO-DO
 	#DONE Membership Page
 	#DONE Coaches
 	#DONE Kit
-	* Club History
+	#DONE Club History
 	#DONE Beginners Run Group
 	#DONE Where is training
 	* Background Image
@@ -18,7 +18,7 @@ TO-DO
 	* All pictures
 	- Tidy all of this up
 	
-
+- Make text more readable - improve contrast/change colours
 - Renew Domain
 - Sammys stuff - old pictures
 - weird error with new_athletes route on sigining up to the newsletter, have a look at old git commits on the routes
@@ -49,6 +49,7 @@ DONE
 - Add Sammy as Admin.
 - delete image from cloudinary when record is deleted
 - delete all new athletes
+- Can now choose images from cloudinary
 ---------------------------------------------
 BLOCKS
 ---------------------------------------------
