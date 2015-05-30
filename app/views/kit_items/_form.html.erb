@@ -27,10 +27,12 @@
         <%= link_to("Upload", "#", :class => "upload_button") %>
         <%= f.cl_image_upload(:image_url, :return_delete_token=>true) %>
       </div>
+      <a href="#" rel="kit_item_image_url" class="chooseImage btn btn-info spaced">Choose Image</a>
       <span class="status"></span>
     </div>
 
     <div class="form_controls">
+      <div class="custom-chosen-preview"></div>
       <div class="preview">
       <% if @kit_item.image_url %>
         <% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_180,h_243,c_thumb,g_face/'%>
