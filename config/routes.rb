@@ -48,6 +48,10 @@ Shefuniathletics::Application.routes.draw do
       put 'sort', on: :collection
    end
 
+   resources :events do
+      put 'sort', on: :collection
+   end
+
    resources :info_pages
 
    resources :admin_sessions, only: [:new, :create, :destroy]

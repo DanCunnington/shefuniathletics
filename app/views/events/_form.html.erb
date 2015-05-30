@@ -1,0 +1,34 @@
+
+<div class="signup_cont spaced">
+
+ <%= form_for(@event) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :description, class: "control-label" %><br />
+    <%= f.text_field :description, class: "form-control" %>
+  </div>
+
+
+  <div class="actions two-em-spaced">
+    <%= f.submit class: "btn btn-block btn-large btn-warning spaced" %>
+    <%= link_to 'Back', events_path, id: "new_fix", class: "btn btn-block btn-default spaced"  %>
+  </div>
+
+
+
+  <% end %>
+</div>
+
+

@@ -12,13 +12,15 @@ TO-DO
 	#DONE Club History
 	#DONE Beginners Run Group
 	#DONE Where is training
+	* Club Records Events
+	* Club Records Page - text stuff
 	* Background Image
 	* Sponsors
 	* Youtube Video
 	* All pictures
 	- Tidy all of this up
 	
-- Make text more readable - improve contrast/change colours
+- Make text more readable - improve contrast/change colours. History page is good. Do it for membership page etc
 - Renew Domain
 - Sammys stuff - old pictures
 - weird error with new_athletes route on sigining up to the newsletter, have a look at old git commits on the routes
