@@ -37,7 +37,12 @@
     </div>
 
     <div class="form_controls">
-      <div class="preview"></div>
+      <div class="preview">
+      <% if @coach.image_url %>
+        <% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_180,h_243,c_thumb,g_face/'%>
+        <%= image_tag(baseCloudinaryURL+@coach.image_url, :width => 45, :height => 61, :crop => :thumb, :gravity => :face )%>
+      <% end %>
+      </div>
     </div>
 
     <%= f.hidden_field :image_url %>

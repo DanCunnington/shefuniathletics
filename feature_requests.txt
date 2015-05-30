@@ -3,7 +3,7 @@ TO-DO
 --------------------------------------------
 
 - Wysiwig doesn't work on firefox
-- delete image from cloudinary when record is deleted
+
 
 - Extend CMS to full site
 	#DONE Membership Page
@@ -47,6 +47,8 @@ DONE
 - Add dynamic date to footer
 - allow shef.ac.uk email addresses or just normal emails
 - Add Sammy as Admin.
+- delete image from cloudinary when record is deleted
+- delete all new athletes
 ---------------------------------------------
 BLOCKS
 ---------------------------------------------

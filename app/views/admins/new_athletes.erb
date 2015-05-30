@@ -2,7 +2,12 @@
 <%= render 'layouts/admin_dash' %>
 
 <% if @athletes != [] %> 
-<p>There are currently <%=@athletes.count%> that have signed up</p>
+<p>There are currently <%=@athletes.count%> athletes registered.</p>
+
+<div class="signup_cont two-em-spaced">
+  <%= link_to "Delete All New Athletes", delete_all_new_athletes_path, id: "delete_new_athletes", class: "btn btn-block btn-large btn-danger edit-btn", "data-no-turbolink" => true, data: { confirm: 'Are you sure?' } %><br>
+</div>
+
 <div class="panel panel-default table-responsive">
   <table class="table table-hover">  
     <thead>  

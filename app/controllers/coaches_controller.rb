@@ -49,6 +49,20 @@ class CoachesController < ApplicationController
   # PATCH/PUT /coaches/1
   # PATCH/PUT /coaches/1.json
   def update
+
+    #If image_url is different to database one, deltete old image from cloudinary
+    fullImage = params[:coach][:image_url].split('/')
+    new_image_url = fullImage[fullImage.length-1]
+    params[:coach][:image_url] = fullImage[fullImage.length-1]
+
+    if new_image_url != @coach.image_url
+
+      #Delete old image from cloudinary
+      #get public id from database
+      public_id = @coach.image_url.split(".")[0]
+      Cloudinary::Api.delete_resources([public_id])
+    end
+
     respond_to do |format|
       if @coach.update(coach_params)
         flash[:success] = "Coach Updated."
@@ -64,6 +78,14 @@ class CoachesController < ApplicationController
   # DELETE /coaches/1
   # DELETE /coaches/1.json
   def destroy
+
+    #Delete image associated with this committee position
+    #get public id from database
+    public_id = @coach.image_url.split(".")[0]
+
+    #Delete on cloudinary
+    Cloudinary::Api.delete_resources([public_id])
+
     @coach.destroy
     flash[:danger] = "Coach Deleted."
     respond_to do |format|

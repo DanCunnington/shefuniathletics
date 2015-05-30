@@ -40,6 +40,7 @@ class KitItemsController < ApplicationController
         format.html { redirect_to kit_items_path }
         format.json { render action: 'index', status: :created }
       else
+
         format.html { render action: 'new' }
         format.json { render json: @kit_item.errors, status: :unprocessable_entity }
       end
@@ -49,6 +50,22 @@ class KitItemsController < ApplicationController
   # PATCH/PUT /kit_items/1
   # PATCH/PUT /kit_items/1.json
   def update
+
+    #If image_url is different to database one, deltete old image from cloudinary
+    fullImage = params[:kit_item][:image_url].split('/')
+    new_image_url = fullImage[fullImage.length-1]
+    params[:kit_item][:image_url] = fullImage[fullImage.length-1]
+
+    if new_image_url != @kit_item.image_url
+
+      #Delete old image from cloudinary
+      #get public id from database
+      public_id = @kit_item.image_url.split(".")[0]
+      Cloudinary::Api.delete_resources([public_id])
+
+
+    end
+
     respond_to do |format|
       if @kit_item.update(kit_item_params)
         flash[:success] = "Kit Item Updated."
@@ -64,6 +81,14 @@ class KitItemsController < ApplicationController
   # DELETE /kit_items/1
   # DELETE /kit_items/1.json
   def destroy
+
+    #Delete image associated with this committee position
+    #get public id from database
+    public_id = @kit_item.image_url.split(".")[0]
+
+    #Delete on cloudinary
+    Cloudinary::Api.delete_resources([public_id])
+
     @kit_item.destroy
     flash[:danger] = "Kit Item Deleted."
     respond_to do |format|

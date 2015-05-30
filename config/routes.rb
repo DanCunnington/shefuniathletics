@@ -7,7 +7,9 @@ Shefuniathletics::Application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'welcome#index'
 
-   resources :new_athletes
+   resources :new_athletes do
+    get 'delete_all', on: :collection
+   end
 
    resources :fixtures do
       get 'admin', on: :collection

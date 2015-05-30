@@ -20,6 +20,15 @@ class NewAthletesController < ApplicationController
 		end
 	end
 
+	def delete_all
+		NewAthlete.delete_all
+		flash[:danger] = "New Athletes Deleted."
+	    respond_to do |format|
+	      format.html { redirect_to new_athletes_admins_path }
+	      format.json { head :no_content }
+	    end
+	end
+
 	
 
 	
