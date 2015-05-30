@@ -5,9 +5,9 @@
 	
 	<% @coaches.each do |coach| %>
 		<div class="row">
-			<% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_180,h_243,c_thumb,g_face/'%>
+			<% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_180,h_243,c_thumb/'%>
 			<div class="col-md-3 col-sm-4">
-			<%= image_tag(baseCloudinaryURL+coach.image_url, class: "coach-photos center-block", alt: "Coach", :width => 180, :height => 243, :crop => :fill )%>
+			<%= image_tag(baseCloudinaryURL+coach.image_url, class: "coach-photos center-block", alt: "Coach", :width => 180, :height => 243, :crop => :thumb )%>
 			</div>
 
 			<div class="col-md-9 col-sm-8">
