@@ -26,7 +26,7 @@
 <div class="row history-para dates-div">
 	<h4 class="montserrat gold keyDates">Key Dates</h4>
 
-	<% if ((@key_dates_1) && (@key_dates_2) && (@key_dates_1 != []) && (@key_dates_2 != [])) %>
+	<% if ((@key_dates_1) && (@key_dates_1 != [])) %>
 		<div class="col-md-5">
 			<ul class="history">
 				<% @key_dates_1.each do |key_date| %>
@@ -35,9 +35,15 @@
 				<br class="one-em-spaced">
 				<% end %>
 			</ul>
+			<% else %>
+			<p>Content will appear shortly.</p>
+		<% end %>
 		</div>
 		<div class="col-md-2"></div>
+
 		<div class="col-md-5">
+
+		<% if ((@key_dates_1) && (@key_dates_1 != [])) %>
 			<ul class="history">
 				<% @key_dates_2.each do |key_date| %>
 
@@ -45,11 +51,10 @@
 				<br class="one-em-spaced">
 				<% end %>
 			</ul>
+		<% else %>
+			<p>Content will appear shortly.</p>
+		<% end %>
 		</div>
-
-	<% else %>
-		<p>Content will appear shortly.</p>
-	<% end %>
 </div>
 
 
