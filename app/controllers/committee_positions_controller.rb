@@ -34,7 +34,7 @@ class CommitteePositionsController < ApplicationController
       fullImage = @committee_position.image_url.split('/')
 
       @committee_position.image_url = fullImage[fullImage.length-1]
-    end
+
 
     respond_to do |format|
       if @committee_position.save
@@ -52,20 +52,8 @@ class CommitteePositionsController < ApplicationController
   # PATCH/PUT /committee_positions/1.json
   def update
 
-    #If image_url is different to database one, deltete old image from cloudinary
     fullImage = params[:committee_position][:image_url].split('/')
-    new_image_url = fullImage[fullImage.length-1]
     params[:committee_position][:image_url] = fullImage[fullImage.length-1]
-
-    if new_image_url != @committee_position.image_url
-
-      #Delete old image from cloudinary
-      #get public id from database
-      public_id = @committee_position.image_url.split(".")[0]
-      Cloudinary::Api.delete_resources([public_id])
-
-
-    end
 
     respond_to do |format|
       if @committee_position.update(committee_position_params)
@@ -83,12 +71,6 @@ class CommitteePositionsController < ApplicationController
   # DELETE /committee_positions/1.json
   def destroy
 
-    #Delete image associated with this committee position
-    #get public id from database
-    public_id = @committee_position.image_url.split(".")[0]
-
-    #Delete on cloudinary
-    Cloudinary::Api.delete_resources([public_id])
 
 
     @committee_position.destroy

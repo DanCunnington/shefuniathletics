@@ -16,7 +16,6 @@ var ready = function() {
       //maxFileSize: 20000000, // 20MB
       dropZone: "#direct_upload",
       start: function (e) {
-        console.log("helloooooo");
         $(".status").text("Starting upload...");
       },
       progress: function (e, data) {
