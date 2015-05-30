@@ -35,7 +35,7 @@ class CommitteePositionsController < ApplicationController
 
       @committee_position.image_url = fullImage[fullImage.length-1]
 
-
+    end
     respond_to do |format|
       if @committee_position.save
         flash[:success] = "Committe Position Created."

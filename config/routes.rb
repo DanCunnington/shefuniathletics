@@ -68,7 +68,7 @@ Shefuniathletics::Application.routes.draw do
    match '/beginners', to: 'welcome#beginners_run_group', via: 'get'
 
    match '/cloudinaryImages', to: 'welcome#getImagesFromCloudinary', via: 'get'
-
+   match '/deleteCloudinaryImage/:image_id', to: 'welcome#deleteCloudinaryImage', via: 'get'
    #Facebook omniauth session routes
    match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
    match 'auth/failure', to: redirect('/'), via: [:get, :post]

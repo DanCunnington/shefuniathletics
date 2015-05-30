@@ -47,5 +47,12 @@ class WelcomeController < ApplicationController
 		render :json => currentImages
 	end
 
+	def deleteCloudinaryImage
+		image_id = params[:image_id]
+
+		Cloudinary::Api.delete_resources([image_id])
+		render :json => {ok: true}
+	end
+
 
 end

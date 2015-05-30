@@ -40,7 +40,8 @@
     </div>
 
     <div class="form_controls">
-      <div class="committee_position_image_url_preview">
+      <div class="custom-chosen-preview"></div>
+      <div class="preview">
       <% if @committee_position.image_url %>
         <% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_45,h_61,c_thumb,g_face/'%>
         <%= image_tag(baseCloudinaryURL+@committee_position.image_url, :width => 45, :height => 61, :crop => :thumb, :gravity => :face )%>
