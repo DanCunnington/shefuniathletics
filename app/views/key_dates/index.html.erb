@@ -19,9 +19,9 @@
         <th></th>
       </tr>  
     </thead>  
-    <tbody>  
+    <tbody class="key_dates-sortable">  
      <% @key_dates.each do |key_date| %>
-     <tr>
+     <tr class="key_date" data-id="<%= key_date.id %>">
       <td><i class="fa fa-bars"></i></td>
       <td><%= key_date.description %></td>
        <td><%= link_to 'Edit', edit_key_date_path(key_date), class:"btn btn-info edit-btn", "data-no-turbolink" => true  %></td>
