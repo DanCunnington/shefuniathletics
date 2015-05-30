@@ -1,0 +1,43 @@
+<h1 class="heading">Coaches</h1>
+
+<%= render 'layouts/admin_dash' %>
+
+<div class="signup_cont two-em-spaced">
+  <%= link_to "New Coach", new_coach_path, id: "new_coach", class: "btn btn-block btn-large btn-warning", "data-no-turbolink" => true %><br>
+</div>
+
+<% if @coaches != [] %> 
+<div class="panel panel-default table-responsive">
+  <table class="table table-hover">  
+    <thead>  
+      <tr>
+        <th></th> 
+        <th>Role</th>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Description</th>
+      </tr>  
+    </thead>  
+    <tbody class="coachs-sortable">  
+    <% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_180,h_243,c_thumb,g_face/'%>
+     <% @coaches.each do |coach| %>
+     <tr class="coach" data-id="<%= coach.id %>">
+      <td><i class="fa fa-bars"></i></td>
+      <td><%= coach.role %></td>
+      <td><%= coach.name %></td>
+      <td><%= image_tag(baseCloudinaryURL+coach.image_url, class: "center-block", :width => 45, :height => 61, :crop => :thumb, :gravity => :face )%></td>
+      <td><%= coach.description %></td>
+       <td><%= link_to 'Edit', edit_coach_path(coach), class:"btn btn-info edit-btn", "data-no-turbolink" => true  %></td>
+      <td><%= link_to 'Delete', coach, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger edit-btn" %></td>   
+    </tr>
+    <% end %>
+  </tbody>
+</table>  
+</div>
+<% else %>
+<p>Page Content will appear shortly.</p>
+<% end %>
+
+<div class="signup_cont two-em-spaced">
+  <%= link_to "New Coach", new_coach_path, id: "new_coach", class: "btn btn-block btn-large btn-warning", "data-no-turbolink" => true %><br>
+</div>

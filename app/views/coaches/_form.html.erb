@@ -1,0 +1,65 @@
+<%= javascript_include_tag "/ckeditor.js" %>
+<div class="signup_cont spaced wysiwyg_cont">
+
+ <%= form_for(@coach) do |f| %>
+  <% if @coach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@coach.errors.count, "error") %> prohibited this coach from being saved:</h2>
+
+      <ul>
+      <% @coach.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :role, class: "control-label" %><br />
+    <%= f.text_field :role, class: "form-control", placeholder:"e.g. Sprints Coach" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name, class: "control-label" %><br />
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image_url, class: "control-label" %><br />
+
+    <div class="form_controls">
+      <div class="upload_button_holder">
+        <%= link_to("Upload", "#", :class => "upload_button") %>
+        <%= f.cl_image_upload(:image_url, :return_delete_token=>true) %>
+      </div>
+      <span class="status"></span>
+    </div>
+
+    <div class="form_controls">
+      <div class="preview"></div>
+    </div>
+
+    <%= f.hidden_field :image_url %>
+    <%= hidden_field_tag :direct, params[:direct] %>
+  </div>
+
+
+  <textarea class="ckeditor" cols="80" id="editor1" name="editor1" rows="10">
+        
+  </textarea>
+    
+
+  <%= f.hidden_field :description, id: "coachHiddenContent" %>
+
+  <div class="actions two-em-spaced">
+    <%= f.submit class: "btn btn-block btn-large btn-warning spaced", onclick:"populateCoachHidden();" %>
+    <%= link_to 'Back', coaches_path, id: "new_fix", class: "btn btn-block btn-default spaced"  %>
+  </div>
+
+
+
+  <% end %>
+</div>
+
+

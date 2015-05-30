@@ -72,3 +72,10 @@ kit_items
 name: string
 image_url: string
 priority: integer
+
+coaches
+-----------------
+name: string
+image_url: string
+description: string
+priority: integer

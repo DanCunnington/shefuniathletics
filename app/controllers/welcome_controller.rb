@@ -13,7 +13,7 @@ class WelcomeController < ApplicationController
 	end
 
 	def coaches
-
+		@coaches = Coach.all
 	end
 
 	def kit

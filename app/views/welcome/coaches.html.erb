@@ -1,48 +1,25 @@
 <h1 class="heading">Coaches</h1>
 
 
+<% if @coaches != [] %>
+	
+	<% @coaches.each do |coach| %>
+		<div class="row">
+			<% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_180,h_243,c_thumb,g_face/'%>
+			<div class="col-md-3 col-sm-4">
+			<%= image_tag(baseCloudinaryURL+coach.image_url, class: "coach-photos center-block", alt: "Coach", :width => 180, :height => 243, :crop => :thumb )%>
+			</div>
 
-<div class="row">
+			<div class="col-md-9 col-sm-8">
+				<h4 class="montserrat gold coach"><%=coach.role%> - <%=coach.name%></h4>
+				<p><%=raw(coach.description)%></p>
+			</div>
+		</div>
+		<br class="two-em-spaced">
+	<% end %>
+	
 
-<div class="col-md-3 col-sm-4">
-	<%= image_tag("sprints-coach.png", id: "sprints-img", class: "coach-photos center-block", alt: "Sprints Coach") %>
-</div>
+<% else %>
+	<p>Page content will appear shortly</p>
 
-<div class="col-md-9 col-sm-8">
-<h4 class="montserrat gold coach">Sprints Coach - Martin Cook</h4>
-<p>
-
-Hi, my name is Martin Cook and I am the sprints coach for University of Sheffield Athletics Club. I am a fully qualified level 2 coach for Sprints and Hurdles and began coaching for the University in September 2011, although I do have many years worth of coaching experience. I also still train and compete as an athlete in 400m where I have medalled at Regional level and competed at National Championships indoor and out.<br><br>
-
-My coaching philosophy is very simple;<br><br>
-
-Work as hard as you can in training and you will gain the rewards in competition!<br>
-
-Athletes at my sessions will work hard but I’m sure that they will all (mostly) tell you that they will have fun along the way. If you work hard for me then I’ll work hard for you! Remember, “Pain is just weakness leaving the body!”
-
-
-
-</p>
-</div>
-</div>
-
-<br class="two-em-spaced">
-
-<div class="row">
-<div class="col-md-3 col-sm-4">
-	<%= image_tag("distance-coach.png", id: "distance-img", class: "coach-photos center-block", alt: "Distance Coach") %>
-</div>
-
-<div class="col-md-9 col-sm-8">
-<h4 class="montserrat gold coach">Distance Coach - Hannah Mitchell</h4>
-<p>
-
-Hi, I am Hannah Mitchell and I coach both University of Sheffield athletics groups, the long/middle distance and the sprints. I have been coaching the University groups since 2009 so have seen many athletes through their university career. I have been competing in athletics since I was 9 (although I am not sure you can call what I do now competing!!) and qualified as a coach at the ripe old age of 14 and an official at the age of 16. My biggest athletics achievement was winning the UK Athletics Young Volunteer of the Year award in 2006. Professionally I am a PE teacher so my whole life revolves around sport and you will rarely see me in anything other than tracksuit bottoms and a hoodie!<br><br>
-
-I am happy to coach anyone…any age, any standard, any experience, any goal… but you need to remember that you will only get out of training what you put in.<br><br>
-
-Although the club does not have any specific field event groups, my background does lie in the field events so if there is anything you would like to try, throws or jumps, just ask. I will try my best to help you and if I can’t then I will point you in the direction of someone who can.
-
-</p>
-</div>
-</div>
+<% end %>

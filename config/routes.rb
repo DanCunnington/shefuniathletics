@@ -34,6 +34,10 @@ Shefuniathletics::Application.routes.draw do
      put 'sort', on: :collection
    end
 
+   resources :coaches do
+     put 'sort', on: :collection
+   end
+
    resources :info_pages
 
    resources :admin_sessions, only: [:new, :create, :destroy]
@@ -52,7 +56,7 @@ Shefuniathletics::Application.routes.draw do
    match '/runs', to: 'rec_run_routes#index', via: 'get'
    match '/membership', to: 'welcome#membership', via: 'get'
    match '/committee', to: 'welcome#committee', via: 'get'
-   match '/coaches', to: 'welcome#coaches', via: 'get'
+   match '/clubcoaches', to: 'welcome#coaches', via: 'get'
    match '/socials', to: 'socials#index', via: 'get'
    match '/kit', to: 'welcome#kit', via: 'get'
    match '/fixtures', to: 'fixtures#index', via: 'get'
