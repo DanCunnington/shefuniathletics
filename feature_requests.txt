@@ -13,7 +13,7 @@ TO-DO
 	#DONE Beginners Run Group
 	#DONE Where is training
 	#DONE Club Records Events
-	* Club Records Page - text stuff - cross country/road records
+	#DONE Club Records Page - text stuff - cross country/road records
 	* Background Image
 	* Sponsors
 	* Youtube Video
