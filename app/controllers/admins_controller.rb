@@ -2,7 +2,6 @@ class AdminsController < ApplicationController
 include AdminSessionsHelper
   	before_action :signed_in_admin, only: [:show, :edit, :update]
 	before_action :correct_user,   only: [:show, :edit, :update]
-	before_action :check_super_admin, only: [:admin_users, :destroy, :new, :create]
 
 	def new
 		@admin = Admin.new
@@ -90,8 +89,5 @@ include AdminSessionsHelper
       redirect_to(root_url) unless current_admin_user?(@admin)
     end
 
-    def check_super_admin
-    	redirect_to(root_url) unless current_admin_user.super_admin
-    end
 
 end
