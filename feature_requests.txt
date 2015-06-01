@@ -3,7 +3,7 @@ TO-DO
 --------------------------------------------
 
 - Wysiwig doesn't work on firefox - works on i.e.
-- Allow admins to view and delete other admins (not super admin)
+
 
 - Extend CMS to full site
 	#DONE Membership Page
@@ -14,7 +14,7 @@ TO-DO
 	#DONE Where is training
 	#DONE Club Records Events
 	#DONE Club Records Page - text stuff - cross country/road records
-	* Background Image
+	#DONE Background Image
 	* Sponsors
 	* Youtube Video
 	* All pictures
@@ -52,6 +52,7 @@ DONE
 - delete image from cloudinary when record is deleted
 - delete all new athletes
 - Can now choose images from cloudinary
+- Allow admins to view and delete other admins (not super admin)
 ---------------------------------------------
 BLOCKS
 ---------------------------------------------

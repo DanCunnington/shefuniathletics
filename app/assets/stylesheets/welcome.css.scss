@@ -10,17 +10,22 @@ h1.heading, h1.training {
 	margin-top: 40px;
 }
 
-
-
+#bg-overlay {
+	background-color: black;
+	opacity: 0.5;
+	height: 100%;
+	width: 100%;
+	position:relative; top:0px;
+}
 body {
-	background: url('bg2.png') top right no-repeat;
-  	background-position: center;
+	/*background: url('bg2.png') top right no-repeat;*/
+  	/*background-position: center;
   	background-attachment: fixed;
   	background-size: cover;
   	background-color: #131313;
   	height: 100%;
   	color: whitesmoke;
-  	margin-top: 50px;
+  	margin-top: 50px;*/
 
 }
 

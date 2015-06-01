@@ -13,10 +13,17 @@
   <%=favicon_link_tag(source='favicon.ico', options={})%>
   <%= render 'layouts/shim' %>
 </head>
-<body<%= " onload=#{@onload}"%>>
+<body style= "background: url(<%=root_url+'bgOpacity.png'%>) top right, url(<%=@backgroundImageURL%>) top right no-repeat;
 
-
-
+    
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #131313; 
+    height: 100%;
+    color: whitesmoke;
+    margin-top: 50px;" <%="onload=#{@onload}"%>>
+ 
 
 <%= render 'layouts/nav' %>
 <%= cloudinary_js_config %>
@@ -33,6 +40,5 @@
 <%= render 'layouts/footer' %>
 
 </div>
-
 </body>
 </html>
