@@ -1,0 +1,45 @@
+<h1 class="heading">Site Images</h1>
+
+<%= render 'layouts/admin_dash' %>
+
+<% if current_admin_user.super_admin %>
+  <div class="signup_cont two-em-spaced">
+    <%= link_to "New Site Image", new_site_image_path, id: "new_site_image", class: "btn btn-block btn-large btn-warning", "data-no-turbolink" => true %><br>
+  </div>
+<% end %>
+
+<% if @site_images != [] %> 
+<div class="panel panel-default table-responsive">
+  <table class="table table-hover">  
+    <thead>  
+      <tr>
+        <th>Reference</th> 
+        <th>Image</th>
+        <th></th>
+        <th></th>
+      </tr>  
+    </thead>  
+    <tbody>  
+    <% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_90,h_90,c_fill/'%>
+     <% @site_images.each do |site_image| %>
+     <tr>
+      <td><%= site_image.reference %></td>
+      <td><%= image_tag(baseCloudinaryURL+site_image.image_url, class: "center-block", :width => 90, :height => 90, :crop => :fill)%></td>
+       <td><%= link_to 'Edit', edit_site_image_path(site_image), class:"btn btn-info edit-btn", "data-no-turbolink" => true  %></td>
+       <% if current_admin_user.super_admin %>
+        <td><%= link_to 'Delete', site_image, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger edit-btn" %></td> 
+      <% end %>  
+    </tr>
+    <% end %>
+  </tbody>
+</table>  
+</div>
+<% else %>
+<p>Page Content will appear shortly.</p>
+<% end %>
+
+<% if current_admin_user.super_admin %>
+  <div class="signup_cont two-em-spaced">
+    <%= link_to "New Site Image", new_site_image_path, id: "new_site_image", class: "btn btn-block btn-large btn-warning", "data-no-turbolink" => true %><br>
+  </div>
+<% end %>

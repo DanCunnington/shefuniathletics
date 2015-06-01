@@ -11,12 +11,10 @@ class InfoPagesController < ApplicationController
 
    # GET /info_pages/1/edit
   def edit
-    @editPage = true
   end
 
   def new
     @info_page= InfoPage.new
-    @editPage = false
   end
 
   # POST /info_pages

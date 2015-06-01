@@ -53,6 +53,7 @@ Shefuniathletics::Application.routes.draw do
    end
 
    resources :info_pages
+   resources :site_images
 
    resources :admin_sessions, only: [:new, :create, :destroy]
    resources :admins do 

@@ -39,7 +39,7 @@ class WelcomeController < ApplicationController
 	end
 
 	def records
-
+		
 	end
 
 	def beginners_run_group

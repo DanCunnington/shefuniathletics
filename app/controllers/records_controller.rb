@@ -10,6 +10,58 @@ class RecordsController < ApplicationController
     @male_indoors = Record.where(event_type: "Male Indoor")
     @female_outdoors = Record.where(event_type: "Female Outdoor")
     @female_indoors = Record.where(event_type: "Female Indoor")
+
+    #Background text
+    background = InfoPage.where(key:"records_background")
+    if background != []
+      @background = InfoPage.find_by(key: "records_background").value
+
+    else
+      @background = "Content will appear shortly"
+    end
+
+    #Image next to background
+    background_image = SiteImage.where(reference:"records_page")
+    if (background_image != [])
+      @background_image = SiteImage.find_by(reference:"records_page").image_url
+    else
+      @background_image = []
+    end
+
+    #Cross Country records
+    cross_country_male = InfoPage.where(key: "cross_country_male_records")
+    if cross_country_male != []
+      @cross_country_male = InfoPage.find_by(key: "cross_country_male_records").value
+    else
+      @cross_country_male = "Content will appear shortly"
+    end
+
+    cross_country_female = InfoPage.where(key: "cross_country_female_records")
+    if cross_country_female != []
+      @cross_country_female = InfoPage.find_by(key: "cross_country_female_records").value
+    else
+      @cross_country_female = "Content will appear shortly"
+    end
+
+    #Road records
+    road_marathon = InfoPage.where(key: "road_marathon_records")
+    if road_marathon != []
+      @road_marathon = InfoPage.find_by(key: "road_marathon_records").value
+    else
+      @road_marathon = "Content will appear shortly"
+    end 
+
+    road_10k = InfoPage.where(key: "road_10k_records")
+    if road_10k != []
+      @road_10k = InfoPage.find_by(key: "road_10k_records").value
+    else
+      @road_10k = "Content will appear shortly"
+    end 
+
+
+    
+
+
   end
 
  
@@ -67,10 +119,10 @@ class RecordsController < ApplicationController
 
 
   def admin
-     @male_outdoors = Record.where(event_type: "Male Outdoor")
-    @male_indoors = Record.where(event_type: "Male Indoor")
-    @female_outdoors = Record.where(event_type: "Female Outdoor")
-    @female_indoors = Record.where(event_type: "Female Indoor")
+     @female_outdoors = Record.where(event_type: "Male Outdoor")
+    @female_indoors = Record.where(event_type: "Male Indoor")
+    @fefemale_outdoors = Record.where(event_type: "Fefemale Outdoor")
+    @fefemale_indoors = Record.where(event_type: "Fefemale Indoor")
   end
 
   def sort

@@ -361,6 +361,7 @@ h4.committee-pos-title {
 	margin-bottom: 20px;
 	color: white;
 	clear: both;
+	font-family: 'Lato', sans-serif
 }
 
 
@@ -477,7 +478,8 @@ td a:hover {
 }
 
 
-#new_fix, #new_soc, #new_committee_position, #new_kit_item, #new_info_page, #new_coach, #new_key_date, #new_historic_image, #new_event {
+#new_fix, #new_soc, #new_committee_position, #new_kit_item, #new_info_page, 
+#new_coach, #new_key_date, #new_historic_image, #new_event, #new_site_image {
 	color: white;
 }
 
@@ -640,7 +642,7 @@ ul.history li  {
 	font-family: 'Montserrat', sans-serif;
 }
 
-img.parkrun, img.membership, img.old {
+img.parkrun, img.membership, img.old, img.record-page {
 	max-width: 100%;
 	border: solid 5px white;
 	border-radius: 2px;
@@ -652,6 +654,10 @@ img.old {
 	max-width: 80%;
 	margin-top: 80px;
 	border: none;
+}
+
+img.record-page {
+	margin-top: 50px;
 }
 
 span.gold {
@@ -772,7 +778,13 @@ a.clear-chosen-preview, a.delete_by_token {
 	padding: 30px;
 	border-radius: 10px;
 	font-weight: lighter;
-	font-size: 12pt;
+	font-size: 11pt;
+	line-height: 2;
+	font-family: 'Lato', sans-serif
+}
+
+.center {
+	text-align: center;
 }
 
 h4.keyDates {
@@ -807,4 +819,8 @@ h4.backgroundHist {
 
 h4.keyDates {
 	clear: both;
+}
+
+i.fa-chevron-down {
+	float: right;
 }

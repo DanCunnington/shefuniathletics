@@ -3,7 +3,7 @@ TO-DO
 --------------------------------------------
 
 - Wysiwig doesn't work on firefox - works on i.e.
-
+- Allow admins to view and delete other admins (not super admin)
 
 - Extend CMS to full site
 	#DONE Membership Page
@@ -12,8 +12,8 @@ TO-DO
 	#DONE Club History
 	#DONE Beginners Run Group
 	#DONE Where is training
-	* Club Records Events
-	* Club Records Page - text stuff
+	#DONE Club Records Events
+	* Club Records Page - text stuff - cross country/road records
 	* Background Image
 	* Sponsors
 	* Youtube Video
@@ -22,7 +22,7 @@ TO-DO
 	
 - Make text more readable - improve contrast/change colours. History page is good. Do it for membership page etc
 - Renew Domain
-- Sammys stuff - old pictures
+- Upload all old pictures
 - weird error with new_athletes route on sigining up to the newsletter, have a look at old git commits on the routes
 - Make any paragraph styles on content inline so they can be picked up by the wysiwyg
 

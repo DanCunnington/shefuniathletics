@@ -17,7 +17,9 @@
         <th>Key</th>
         <th>Value</th>
         <th></th>
-        <th></th>
+        <% if current_admin_user.super_admin %>
+          <th></th>
+        <% end %>
       </tr>  
     </thead>  
     <tbody>  

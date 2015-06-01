@@ -89,3 +89,8 @@ historic_images
 -----------------
 image_url: string
 priority: integer
+
+site_images
+-----------------
+reference: string
+image_url: string
