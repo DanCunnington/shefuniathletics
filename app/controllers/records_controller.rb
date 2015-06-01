@@ -119,10 +119,10 @@ class RecordsController < ApplicationController
 
 
   def admin
-     @female_outdoors = Record.where(event_type: "Male Outdoor")
-    @female_indoors = Record.where(event_type: "Male Indoor")
-    @fefemale_outdoors = Record.where(event_type: "Fefemale Outdoor")
-    @fefemale_indoors = Record.where(event_type: "Fefemale Indoor")
+     @male_outdoors = Record.where(event_type: "Male Outdoor")
+    @male_indoors = Record.where(event_type: "Male Indoor")
+    @female_outdoors = Record.where(event_type: "Female Outdoor")
+    @female_indoors = Record.where(event_type: "Female Indoor")
   end
 
   def sort
