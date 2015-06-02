@@ -2,11 +2,6 @@
 
 var ready = function() {
 
-  CKEDITOR.on('instanceReady', function(){ 
-
-    CKEDITOR.instances.editor1.setData($("#hiddenKeyDateContent").val());
-  });
-
   //Committee positions are sortable
   var set_positions = function(){
     // loop through and give each task a data-pos

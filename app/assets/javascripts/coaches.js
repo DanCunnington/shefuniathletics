@@ -1,8 +1,18 @@
 var ready = function() {
 
   CKEDITOR.on('instanceReady', function(){ 
+    var instances = CKEDITOR.instances;
 
-    CKEDITOR.instances.editor1.setData($("#coachHiddenContent").val());
+    if (instances.editor1) {
+      CKEDITOR.instances.editor1.setData($("#hiddenContent").val());  
+    } else if (instances.committeePositionsEditor) {
+      CKEDITOR.instances.committeePositionsEditor.setData($("#committePositionHiddenContent").val());
+    } else if (instances.coachesEditor) {
+      CKEDITOR.instances.coachesEditor.setData($("#coachHiddenContent").val());
+
+    } else if (instances.keyDatesEditor) {
+      CKEDITOR.instances.keyDatesEditor.setData($("#hiddenKeyDateContent").val());
+    }
   });
 
   // Cloudinary jQuery integration library uses jQuery File Upload widget

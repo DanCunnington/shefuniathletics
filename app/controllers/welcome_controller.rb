@@ -2,6 +2,30 @@ class WelcomeController < ApplicationController
 
 	def index
 		@new_athlete = NewAthlete.new
+
+		#Youtube video
+		varsity2014VideoId = "eg74utO0CI8"
+		info_page_record = InfoPage.where(key:"homepage_video_link")
+		if info_page_record != []
+
+			record = InfoPage.find_by(key: "homepage_video_link").value
+			
+			#Remove html tags
+			link = record.gsub!(/<[^>]*>/, "")
+
+			#Check link is a youtube video
+			validYoutubeRegex = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/i
+
+			#Extract id if match
+			if match = link.match(validYoutubeRegex)
+				@youtubeVideoID, lastChar = match.captures
+			else
+				@youtubeVideoID = varsity2014VideoId
+			end
+			
+		else
+			@youtubeVideoID = varsity2014VideoId
+		end
 	end
 
 	def membership

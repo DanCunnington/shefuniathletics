@@ -12,7 +12,7 @@ TO-DO
 	#DONE Club Records Events
 	#DONE Club Records Page - text stuff - cross country/road records
 	#DONE Background Image
-	* Sponsors
+	* Sponsors - need image and link maybe just remove these completely? Ask
 	* Youtube Video
 	* All pictures
 	- Tidy all of this up

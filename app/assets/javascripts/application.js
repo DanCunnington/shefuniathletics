@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require cloudinary
+//= require ckeditor/init
 //= require html.sortable
 //= require owl.carousel
 //= require bootstrap.min
