@@ -2,8 +2,10 @@ var ready = function() {
 
   CKEDITOR.on('instanceReady', function(){ 
 
-    CKEDITOR.instances.editor1.setData($("#coachHiddenContent").val());
+    CKEDITOR.instances.editor1.setData($("#committePositionHiddenContent").val());
   });
+
+
 
   // Cloudinary jQuery integration library uses jQuery File Upload widget
   // (see http://blueimp.github.io/jQuery-File-Upload/).
@@ -38,6 +40,7 @@ var ready = function() {
       $.cloudinary.image(data.result.public_id, {
         format: data.result.format, width: 50, height: 50, crop: "fit"
       }).appendTo(preview);
+
 
       $('<a/>').
         addClass('delete_by_token').
@@ -76,33 +79,33 @@ var ready = function() {
   }
 
 
-  //Coaches are sortable
+  //Committee positions are sortable
   var set_positions = function(){
     // loop through and give each task a data-pos
     // attribute that holds its position in the DOM
-    $('tr.coach').each(function(i){
+    $('tr.committee_position').each(function(i){
         $(this).attr("data-pos",i+1);
     });
   }
   // call sortable on our div with the sortable class
-  $('.coaches-sortable').sortable();
+  $('.committee_positions-sortable').sortable();
 
   // after the order changes
-  $('.coaches-sortable').sortable().bind('sortupdate', function(e, ui) {
+  $('.committee_positions-sortable').sortable().bind('sortupdate', function(e, ui) {
       // array to store new order
       updated_order = []
       // set the updated positions
       set_positions();
 
       // populate the updated_order array with the new task positions
-      $('tr.coach').each(function(i){
+      $('tr.committee_position').each(function(i){
           updated_order.push({ id: $(this).data("id"), position: i+1 });
       });
 
       // send the updated order via ajax
       $.ajax({
           type: "PUT",
-          url: '/coaches/sort',
+          url: '/committee_positions/sort',
           data: { order: updated_order }
       });
   });
@@ -111,13 +114,13 @@ var ready = function() {
 
 }
 
-function populateCoachHidden() {
+function populateCommitteeHidden() {
 
   //Get contents of wysiwg
   var textAsHTML = $(".cke_wysiwyg_frame").contents().find("body").get(0).innerHTML;
 
   //Place in hidden field
-  $("#coachHiddenContent").val(textAsHTML);
+  $("#committePositionHiddenContent").val(textAsHTML);
 }
 
 $(document).ready(ready);

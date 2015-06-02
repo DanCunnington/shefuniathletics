@@ -1,29 +1,9 @@
 var ready = function() {
 
-  var appendCommitteeContentsInterval =  setInterval(function() {
+  CKEDITOR.on('instanceReady', function(){ 
 
-    //Get current value
-    var currentText = $("#committePositionHiddenContent").val();
-
-    if (currentText) {
-      if ($(".cke_wysiwyg_frame").contents().find("body").get(0)) {
-        var contentsOfFrame = $(".cke_wysiwyg_frame").contents().find("body").get(0).innerHTML;
-        if ((contentsOfFrame == "undefined") || (contentsOfFrame == ""))  {
-
-          //Append wysiwig with current text
-          $(".cke_wysiwyg_frame").contents().find("body").get(0).innerHTML = currentText;
-        } else {
-
-          //Appended, stop and clear interval
-          return clearInterval(appendCommitteeContentsInterval);
-        }
-      }
-    } else {
-      return clearInterval(appendCommitteeContentsInterval);
-    }
-    
-    
-  }, 500);
+    CKEDITOR.instances.editor1.setData($("#committePositionHiddenContent").val());
+  });
 
 
 
