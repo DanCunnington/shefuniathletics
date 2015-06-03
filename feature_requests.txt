@@ -1,20 +1,6 @@
 --------------------------------------------
 TO-DO
 --------------------------------------------
-
-- Extend CMS to full site
-	#DONE Membership Page
-	#DONE Coaches
-	#DONE Kit
-	#DONE Club History
-	#DONE Beginners Run Group
-	#DONE Where is training
-	#DONE Club Records Events
-	#DONE Club Records Page - text stuff - cross country/road records
-	#DONE Background Image
-	#DONE Youtube Video
-	#DONE All pictures
-	- Tidy up names of keys in info pages and image names in site images
 	
 - Gmail oauth instead of storing password in environment variables
 - Upload all old pictures
@@ -49,6 +35,19 @@ DONE
 - Cancel Hosting
 - Wysiwig doesn't work on firefox - works on i.e and safari
 - Make text more readable - improve contrast/change colours. History page is good. Do it for membership page etc
+- Extend CMS to full site
+	#DONE Membership Page
+	#DONE Coaches
+	#DONE Kit
+	#DONE Club History
+	#DONE Beginners Run Group
+	#DONE Where is training
+	#DONE Club Records Events
+	#DONE Club Records Page - text stuff - cross country/road records
+	#DONE Background Image
+	#DONE Youtube Video
+	#DONE All pictures
+	#DONE Tidy up names of keys in info pages and image names in site images
 ---------------------------------------------
 BLOCKS
 ---------------------------------------------

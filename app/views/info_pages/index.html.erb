@@ -14,8 +14,8 @@
   <table class="table table-hover">  
     <thead>  
       <tr>    
-        <th>Key</th>
-        <th>Value</th>
+        <th>Name</th>
+        <th>Content</th>
         <th></th>
         <% if current_admin_user.super_admin %>
           <th></th>
@@ -25,7 +25,13 @@
     <tbody>  
      <% @info_pages.each do |info_page| %>
      <tr>
-      <td><%= info_page.key %></td>
+      <td>
+      <% if info_page.key.include?('_') %>
+        <%= info_page.key.gsub!('_',' ').split.map(&:capitalize).join(' ') %>
+      <% else %>
+        <%= info_page.key.split.map(&:capitalize).join(' ') %>
+      <% end %>
+      </td>
       <td><%= info_page.value[0..100] %></td>
        <td><%= link_to 'Edit', edit_info_page_path(info_page), class:"btn btn-info edit-btn", "data-no-turbolink" => true  %></td>
        <% if current_admin_user.super_admin %>

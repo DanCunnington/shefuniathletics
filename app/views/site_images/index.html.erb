@@ -23,7 +23,13 @@
     <% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_90,h_90,c_fill/'%>
      <% @site_images.each do |site_image| %>
      <tr>
-      <td><%= site_image.reference %></td>
+      <td>
+        <% if site_image.reference.include?('_') %>
+          <%= site_image.reference.gsub!('_',' ').split.map(&:capitalize).join(' ') %>
+        <% else %>
+          <%= site_image.reference.split.map(&:capitalize).join(' ') %>
+        <% end %>
+      </td>
       <td><%= image_tag(baseCloudinaryURL+site_image.image_url, class: "center-block", :width => 90, :height => 90, :crop => :fill)%></td>
        <td><%= link_to 'Edit', edit_site_image_path(site_image), class:"btn btn-info edit-btn", "data-no-turbolink" => true  %></td>
        <% if current_admin_user.super_admin %>
