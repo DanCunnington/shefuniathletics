@@ -3,8 +3,6 @@ TO-DO
 --------------------------------------------
 	
 - Gmail oauth instead of storing password in environment variables
-- Upload all old pictures
-
 
 ---------------------------------------------
 DONE
@@ -48,6 +46,8 @@ DONE
 	#DONE Youtube Video
 	#DONE All pictures
 	#DONE Tidy up names of keys in info pages and image names in site images
+
+- Upload all old pictures
 ---------------------------------------------
 BLOCKS
 ---------------------------------------------
