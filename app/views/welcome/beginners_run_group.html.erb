@@ -2,19 +2,25 @@
 <div class="row">
 
 
-<div class="col-md-5">
-<%= image_tag "parkrun.png", class:"parkrun"%>
-</div>
+	<div class="col-md-6">
+		<% if @image != [] %>
+	      <% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_500,h_300,c_fit/'%>
+	      <%= image_tag(baseCloudinaryURL+@image, class: "membership center-block")%>
+	    <% else %>
+	      <p>Content will appear shortly.</p>
+	    <% end %>
+	</div>
 
-<br class="clear-fix">
+	<br class="clear-fix">
 
-<div class="col-md-7">
-<p class="center-text">
-<% if !@text.blank?%>
-<%=raw @text%>
+	<div class="col-md-6">
 
-<% end %>
+		<div class="history-para">
+			<% if !@text.blank?%>
 
-</p>
-</div>
+				<%=raw @text%>
+
+			<% end %>
+		</div>
+	</div>
 </div>

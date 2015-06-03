@@ -72,7 +72,7 @@ class SiteImagesController < ApplicationController
   def destroy
 
     @site_image.destroy
-    flash[:danger] = "Committee Position Deleted."
+    flash[:danger] = "Site Image Record Deleted."
     respond_to do |format|
       format.html { redirect_to site_images_path }
       format.json { head :no_content }

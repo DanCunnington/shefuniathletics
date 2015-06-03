@@ -30,6 +30,13 @@ class WelcomeController < ApplicationController
 
 	def membership
 		@text = InfoPage.find_by(key: "membership").value 
+
+		image = SiteImage.where(reference:"membership_page")
+	    if (image != [])
+	      @image = SiteImage.find_by(reference:"membership_page").image_url
+	    else
+	      @image = []
+	    end
 	end
 
 	def committee
@@ -68,6 +75,13 @@ class WelcomeController < ApplicationController
 
 	def beginners_run_group
 		@text = InfoPage.find_by(key: "beginners_run_group").value
+
+		image = SiteImage.where(reference:"beginners_run_group_page")
+	    if (image != [])
+	      @image = SiteImage.find_by(reference:"beginners_run_group_page").image_url
+	    else
+	      @image = []
+	    end
 
 	end
 

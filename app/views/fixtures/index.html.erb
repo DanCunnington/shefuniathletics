@@ -1,31 +1,47 @@
 <h1 class="heading">Fixtures and Results</h1>
-<% if @fixtures != [] %> 
-<div class="panel panel-default table-responsive">
-  <table class="table table-hover">  
-    <thead>  
-      <tr>    
-        <th>Name</th>
-        <th>Date</th>
-        <th>Location</th>
-        <th>Result link</th>  
-      </tr>  
-    </thead>  
-    <tbody>  
-     <% @fixtures.each do |fixture| %>
-     <tr>
-      <td><%= fixture.name %></td>
-      <td><%= fixture.date.to_formatted_s(:long) %></td>
-      <td><%= fixture.location %></td>
-      <% if fixture.result_link != "" %>
-        <td><%= link_to "Here", fixture.result_link, class:"btn btn-warning edit-btn" %></td>
+
+<div class="row">
+  <div class="col-md-7">
+    <% if @fixtures != [] %> 
+      <div class="panel panel-default table-responsive">
+        <table class="table table-hover">  
+          <thead>  
+            <tr>    
+              <th>Name</th>
+              <th>Date</th>
+              <th>Location</th>
+              <th>Result link</th>  
+            </tr>  
+          </thead>  
+          <tbody>  
+           <% @fixtures.each do |fixture| %>
+           <tr>
+            <td><%= fixture.name %></td>
+            <td><%= fixture.date.to_formatted_s(:long) %></td>
+            <td><%= fixture.location %></td>
+            <% if fixture.result_link != "" %>
+              <td><%= link_to "Here", fixture.result_link, class:"btn btn-warning edit-btn" %></td>
+            <% else %>
+              <td></td>
+            <% end %>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>  
+      </div>
       <% else %>
-        <td></td>
+      <p>Fixtures will appear shortly.</p>
       <% end %>
-    </tr>
+  </div>
+
+  <div class="col-md-5">
+    <% if @image != [] %>
+      <% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_500,h_300,c_fit/'%>
+      <%= image_tag(baseCloudinaryURL+@image, class: "membership center-block")%>
+    <% else %>
+      <p>Content will appear shortly.</p>
     <% end %>
-  </tbody>
-</table>  
+  </div>
+
 </div>
-<% else %>
-<p>Fixtures will appear shortly.</p>
-<% end %>
+

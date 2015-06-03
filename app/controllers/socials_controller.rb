@@ -6,6 +6,13 @@ class SocialsController < ApplicationController
   # GET /socials.json
   def index
     @socials = Social.all.order(date: :asc)
+
+    image = SiteImage.where(reference:"socials_page")
+    if (image != [])
+      @image = SiteImage.find_by(reference:"socials_page").image_url
+    else
+      @image = []
+    end
     
   end
 

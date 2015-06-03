@@ -6,6 +6,13 @@ class FixturesController < ApplicationController
   # GET /fixtures.json
   def index
     @fixtures = Fixture.all.order(date: :asc)
+
+    image = SiteImage.where(reference:"fixtures_page")
+    if (image != [])
+      @image = SiteImage.find_by(reference:"fixtures_page").image_url
+    else
+      @image = []
+    end
   end
 
  

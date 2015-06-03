@@ -227,7 +227,7 @@ a {
 }
 
 
-@media (max-width: 1062px) {
+/*@media (max-width: 1062px) {
     .navbar-header {
         float: none;
     }
@@ -252,14 +252,14 @@ a {
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    /* since 3.1.0 */
+    
     .navbar-collapse.collapse.in { 
         display: block!important;
     }
     .collapsing {
         overflow: hidden!important;
     }
-}
+}*/
 
 @media (max-width: 767px) {
 	p, h4.coach, h4.record {
@@ -480,6 +480,11 @@ td a:hover {
 
 .kit-para p {
 	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+
+p.lato {
+	font-family: 'Lato', sans-serif;
 }
 
 

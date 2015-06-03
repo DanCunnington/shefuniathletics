@@ -3,15 +3,18 @@
 
 <div class="row">
 
-<div class="col-md-5">
+	<div class="col-md-6">
+		<% if @image != [] %>
+	      <% baseCloudinaryURL = 'http://res.cloudinary.com/shefuniathletics/image/upload/w_500,h_300,c_fit/'%>
+	      <%= image_tag(baseCloudinaryURL+@image, class: "membership center-block")%>
+	    <% else %>
+	      <p>Content will appear shortly.</p>
+	    <% end %>
+	</div>
 
-<%= image_tag "membership.png", class:"membership" %>
+	<br class="clear-fix">
+
+	<div class="col-md-6">
+		<div class="history-para"><%=raw @text%></div>
+	</div>
 </div>
-
-<br class="clear-fix">
-
-<div class="col-md-7">
-<p class="center-text"><%=raw @text%></p>
-</div>
-
-<br class="clear">
