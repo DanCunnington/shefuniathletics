@@ -59,6 +59,20 @@ class WelcomeController < ApplicationController
 		
 	end
 
+	def training
+
+		info_page_record = InfoPage.where(key:"training_google_maps_link")
+		if info_page_record != []
+			link = InfoPage.find_by(key: "training_google_maps_link").value
+		else
+			link = "https://mapsengine.google.com/map/embed?mid=zqAipI02NFP4.kfnbBfldJBZo"
+		end
+		
+		#remove html tags
+		@google_maps_link = link.gsub!(/<[^>]*>/, "")
+
+	end
+
 	def history
 		@background = InfoPage.find_by(key: "history_background").value
 
