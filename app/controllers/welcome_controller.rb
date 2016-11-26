@@ -99,6 +99,10 @@ class WelcomeController < ApplicationController
 
 	end
 
+	def bucs_xc_2016
+		
+	end
+
 	def getImagesFromCloudinary
 		currentImages = Cloudinary::Api.resources(:max_results => 500)
 

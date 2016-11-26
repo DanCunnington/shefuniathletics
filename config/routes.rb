@@ -79,6 +79,7 @@ Shefuniathletics::Application.routes.draw do
    match '/records', to: 'records#index', via: 'get'
    match '/history', to: 'welcome#history', via: 'get'
    match '/beginners', to: 'welcome#beginners_run_group', via: 'get'
+   match '/bucs_xc_2016', to: 'welcome#bucs_xc_2016', via: 'get'
 
    match '/cloudinaryImages', to: 'welcome#getImagesFromCloudinary', via: 'get'
    match '/deleteCloudinaryImage/:image_id', to: 'welcome#deleteCloudinaryImage', via: 'get'
